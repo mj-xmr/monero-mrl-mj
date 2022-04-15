@@ -1,4 +1,4 @@
-# monero-mrl-mj
+# Decoy
 
-Documenting and experimenting on the Decoy algorithm.
+Documenting and experimenting on the Decoy Selection Algorithm.
 
