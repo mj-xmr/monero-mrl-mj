@@ -4,7 +4,12 @@ Documenting and experimenting on the Decoy Selection Algorithm.
 
 ## Results
 
+![image](https://user-images.githubusercontent.com/63722585/165168523-9ed20d59-c406-491e-a10d-148076d1952a.png)
+
+
 ## Usage
+
+Use these steps to recreate the above plots:
 
 ```bash
 BRANCH=mrl-decoy-descr-tests
