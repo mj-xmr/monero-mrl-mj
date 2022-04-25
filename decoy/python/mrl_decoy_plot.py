@@ -9,9 +9,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import math
 import argparse
-import wget
-import shutil
-from matplotlib import pyplot as plt
+#import shutil
 
 FILE_IN = 'mul_2_ratio_good.csv'
 PATH_IN = '/tmp/' + FILE_IN
