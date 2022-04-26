@@ -4,15 +4,21 @@ Documenting and experimenting on the Decoy Selection Algorithm.
 
 ## Strategy
 
+- New unit tests shall be written, that cover the happy path and edge cases of the decoy algorithm
 - The nevralgic parts of the system shall be first experimentally probed and the results shall be gathered
-- An alternative Python (or R) implementation shall be prepared, since Python offers many statistical analysis and visualization tools. The correspondence between this and the original implementation shall be confirmed via Kolmogorov-Smirnov test
+- An alternative Python (or R) implementation shall be prepared, since Python offers many statistical analysis and visualization tools. The correspondence between this and the original implementation shall be confirmed via the Kolmogorov-Smirnov test
 - With the Python implementation at hand, a mathematical expression of the decoy algo shall be derived
 
 ## Results
 
 TODO: use boxplot instead of scatter plot
 
-![image](https://user-images.githubusercontent.com/63722585/165168523-9ed20d59-c406-491e-a10d-148076d1952a.png)
+![image](https://user-images.githubusercontent.com/63722585/165282001-b7ec412d-ff5b-4975-bbf4-d4f517fee47a.png)
+
+## Unit tests
+
+![image](https://user-images.githubusercontent.com/63722585/165281752-8073a130-f46d-450f-9de8-a06c96fb96f5.png)
+
 
 
 ## Usage
