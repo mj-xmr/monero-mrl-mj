@@ -2,7 +2,15 @@
 
 Documenting and experimenting on the Decoy Selection Algorithm.
 
+## Strategy
+
+- The nevralgic parts of the system shall be first experimentally probed and the results shall be gathered
+- An alternative Python (or R) implementation shall be prepared, since Python offers many statistical analysis and visualization tools. The correspondence between this and the original implementation shall be confirmed via Kolmogorov-Smirnov test
+- With the Python implementation at hand, a mathematical expression of the decoy algo shall be derived
+
 ## Results
+
+TODO: use boxplot instead of scatter plot
 
 ![image](https://user-images.githubusercontent.com/63722585/165168523-9ed20d59-c406-491e-a10d-148076d1952a.png)
 
