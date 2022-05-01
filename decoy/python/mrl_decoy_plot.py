@@ -32,13 +32,18 @@ def writeTimestamp():
         fout.write(datetime.now().replace(microsecond=0).isoformat().replace('T', '  '))
 
 def plot_data(data):
-    plt.figure()
-    plt.scatter(data[:,0], data[:, 1])
-    plt.xlabel("Multiple of the RCT minimal lenght")
-    plt.ylabel("Probability of a good pick")
-    plt.grid()
+    fig, (ax1, ax2) = plt.subplots(1, 2)
+    #fig.suptitle('Horizontally stacked subplots')
+    ax1.scatter(data[:,0], data[:, 1])
+    ax2.scatter(data[:,0], data[:, 1])
+    
+    ax1.set_xlabel("Multiple of the RCT's minimal lenght")
+    ax2.set_xlabel("Multiple of the RCT's minimal lenght (log scale)")
+    ax1.set_ylabel("Probability of a good pick")
+    ax2.set_xscale('log')
+    ax1.grid()
+    ax2.grid()
     plt.show()
-    #print(data[:,0])
 
 def plot_function(data):
     # This might approximate the gathered data
