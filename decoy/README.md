@@ -11,9 +11,8 @@ Documenting and experimenting on the Decoy Selection Algorithm.
 
 ## Results
 
-TODO: use boxplot instead of scatter plot
+![log-scale](https://user-images.githubusercontent.com/63722585/166186092-62d0e1d6-5e75-4702-98d8-0ee5d8e0285b.png)
 
-![image](https://user-images.githubusercontent.com/63722585/165282001-b7ec412d-ff5b-4975-bbf4-d4f517fee47a.png)
 
 ## Unit tests
 
