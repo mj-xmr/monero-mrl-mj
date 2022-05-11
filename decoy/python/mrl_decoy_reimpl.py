@@ -49,14 +49,14 @@ def prepDir():
 
 
 def plot_data(data):
-    plt.plot(data)
+    plt.hist(data, bins=50)
     plt.grid()
     plt.show()
 
 def main():
     parser = GetParser()
     args = parser.parse_args()
-    #GammaPicker([1, 2, 3])
+    GammaPicker([1, 2, 3])
     if os.path.isfile(PATH_IN):
         PATH = PATH_IN
     else:
