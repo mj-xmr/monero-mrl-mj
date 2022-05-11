@@ -16,8 +16,7 @@ Documenting and experimenting on the Decoy Selection Algorithm.
 
 ## Comparison of Monero's and Python Gamma distribution
 
-![gamma-cdfs](https://user-images.githubusercontent.com/63722585/167892208-ca2dfbdd-e9af-44a3-94bf-e24210effabe.png)
-
+![image](https://user-images.githubusercontent.com/63722585/167909725-0afb8d37-8f95-4fdb-9c0f-4eaa62a49a23.png)
 
 
 ## Unit tests
