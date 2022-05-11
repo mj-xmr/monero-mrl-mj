@@ -31,16 +31,16 @@ def GetParser():
 class GammaPicker():
     def __init__(self, rct_offsets, shape=GAMMA_SHAPE, scale=GAMMA_SCALE):
         #define x-axis values
-        x = np.linspace(0, 40, 100) 
+        self.x = np.linspace(4, 25, 100) 
 
         #calculate pdf of Gamma distribution for each x-value
-        y = gamma.pdf(x, a=shape, scale=scale)
+        self.y = gamma.pdf(self.x, a=shape, scale=scale)
 
         #create plot of Gamma distribution
-        plt.plot(x, y)
+        #plt.plot(x, y)
 
         #display plot
-        plt.show()
+        #plt.show()
         
 def prepDir():
     if os.path.isdir(DIR_IN):
@@ -48,22 +48,32 @@ def prepDir():
     os.makedirs(DIR_IN, exist_ok=True)
 
 
-def plot_data(data):
-    plt.hist(data, bins=50)
-    plt.grid()
+def plot_data(data, gam):
+    fig, (ax1, ax2) = plt.subplots(1, 2)
+    fig.suptitle("Gamma distributions' CDFs")
+    ax1.hist(data, bins=50)
+    ax2.plot(gam.x, gam.y)
+    ax1.grid()
+    ax2.grid()
+
+    ax1.set_xlabel("Monero")
+    ax2.set_xlabel("Python")
+    ax1.set_ylabel("Occurrences")
+
     plt.show()
 
 def main():
     parser = GetParser()
     args = parser.parse_args()
-    GammaPicker([1, 2, 3])
+    rct_outputs = [1, 2, 3]
+    gam = GammaPicker(rct_outputs)
     if os.path.isfile(PATH_IN):
         PATH = PATH_IN
     else:
         PATH = PATH_IN_ALT
     data = np.loadtxt(PATH, delimiter=',')
     print(data)
-    plot_data(data)
+    plot_data(data, gam)
     #plot_function(data)
     
 if __name__ == "__main__":
