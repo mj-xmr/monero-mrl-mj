@@ -50,7 +50,7 @@ def prepDir():
 
 def plot_data(data, gam):
     fig, (ax1, ax2) = plt.subplots(1, 2)
-    fig.suptitle("Gamma distributions' CDFs")
+    fig.suptitle("Gamma distributions' PDFs")
     ax1.hist(data, bins=50)
     ax2.plot(gam.x, gam.y)
     ax1.grid()
