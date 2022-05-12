@@ -10,10 +10,7 @@ from matplotlib import pyplot as plt
 import math
 import argparse
 #import shutil
-
-FILE_IN = 'mul_2_ratio_good.csv'
-PATH_IN = '/tmp/' + FILE_IN
-PATH_IN_ALT = '../data/' + FILE_IN
+import decoy_consts
 
 def GetParser():
     parser = argparse.ArgumentParser()
@@ -21,15 +18,6 @@ def GetParser():
     parser.add_argument('-o', '--one-only', default=False, action='store_true', help="Plot only one")
 
     return parser
-    
-def prepDir():
-    if os.path.isdir(DIR_IN):
-        shutil.rmtree(DIR_IN)
-    os.makedirs(DIR_IN, exist_ok=True)
-    
-def writeTimestamp():
-    with open(PATH_TIMESTAMP, 'w') as fout:
-        fout.write(datetime.now().replace(microsecond=0).isoformat().replace('T', '  '))
 
 def plot_data(data):
     fig, (ax1, ax2) = plt.subplots(1, 2)
@@ -59,11 +47,7 @@ def plot_function(data):
 def main():
     parser = GetParser()
     args = parser.parse_args()
-    if os.path.isfile(PATH_IN):
-        PATH = PATH_IN
-    else:
-        PATH = PATH_IN_ALT
-    data = np.loadtxt(PATH, delimiter=',')
+    data = np.loadtxt(decoy_consts.PATH_MUL_2_RATIO_GOOD, delimiter=',')
     #print(data)
     plot_data(data)
     #plot_function(data)

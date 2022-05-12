@@ -11,15 +11,7 @@ import math
 import argparse
 from scipy.stats import gamma
 #import shutil
-
-GAMMA_SHAPE = 19.28
-GAMMA_SCALE = (1/1.61)
-FILE_OUT = 'mul_2_ratio_good_py.csv'
-PATH_OUT = '/tmp/' + FILE_OUT
-#PATH_IN_ALT = '../data/' + FILE_IN
-FILE_IN = 'gamma_distrib.csv'
-PATH_IN = '/tmp/' + FILE_IN
-
+import decoy_consts
  
 def GetParser():
     parser = argparse.ArgumentParser()
@@ -29,7 +21,7 @@ def GetParser():
     return parser
 
 class GammaPDFPython():
-    def __init__(self, shape=GAMMA_SHAPE, scale=GAMMA_SCALE):
+    def __init__(self, shape=decoy_consts.GAMMA_SHAPE, scale=decoy_consts.GAMMA_SCALE):
         #define x-axis values
         self.x = np.linspace(4, 25, 100) 
 
@@ -38,26 +30,16 @@ class GammaPDFPython():
 
 class GammaPDFMonero():
     def __init__(self):
-        if os.path.isfile(PATH_IN):
-            PATH = PATH_IN
-        else:
-            PATH = PATH_IN_ALT
-        self.data = np.loadtxt(PATH, delimiter=',')
+        self.data = np.loadtxt(decoy_consts.PATH_GAMMA_PDF, delimiter=',')
         print(self.data)
 
 class GammaPickerPyhon():
-    def __init__(self, rct_offsets, shape=GAMMA_SHAPE, scale=GAMMA_SCALE):
+    def __init__(self, rct_offsets, shape=decoy_consts.GAMMA_SHAPE, scale=decoy_consts.GAMMA_SCALE):
         pass # TODO: This is meant to be the reimplementation
 
 class GammaPickerMonero():
     def __init__(self, rct_offsets):
         pass # TODO: This will only read the data file
-        
-def prepDir():
-    if os.path.isdir(DIR_IN):
-        shutil.rmtree(DIR_IN)
-    os.makedirs(DIR_IN, exist_ok=True)
-
 
 def plot_data(gamPDFMo, gamPDFPy):
     fig, (ax1, ax2) = plt.subplots(1, 2)
