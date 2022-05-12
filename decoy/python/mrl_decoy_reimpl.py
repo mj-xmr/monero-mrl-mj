@@ -28,19 +28,30 @@ def GetParser():
 
     return parser
 
-class GammaPicker():
-    def __init__(self, rct_offsets, shape=GAMMA_SHAPE, scale=GAMMA_SCALE):
+class GammaPDFPython():
+    def __init__(self, shape=GAMMA_SHAPE, scale=GAMMA_SCALE):
         #define x-axis values
         self.x = np.linspace(4, 25, 100) 
 
         #calculate pdf of Gamma distribution for each x-value
         self.y = gamma.pdf(self.x, a=shape, scale=scale)
 
-        #create plot of Gamma distribution
-        #plt.plot(x, y)
+class GammaPDFMonero():
+    def __init__(self):
+        if os.path.isfile(PATH_IN):
+            PATH = PATH_IN
+        else:
+            PATH = PATH_IN_ALT
+        self.data = np.loadtxt(PATH, delimiter=',')
+        print(self.data)
 
-        #display plot
-        #plt.show()
+class GammaPickerPyhon():
+    def __init__(self, rct_offsets, shape=GAMMA_SHAPE, scale=GAMMA_SCALE):
+        pass # TODO: This is meant to be the reimplementation
+
+class GammaPickerMonero():
+    def __init__(self, rct_offsets):
+        pass # TODO: This will only read the data file
         
 def prepDir():
     if os.path.isdir(DIR_IN):
@@ -48,11 +59,11 @@ def prepDir():
     os.makedirs(DIR_IN, exist_ok=True)
 
 
-def plot_data(data, gam):
+def plot_data(gamPDFMo, gamPDFPy):
     fig, (ax1, ax2) = plt.subplots(1, 2)
     fig.suptitle("Gamma distributions' PDFs")
-    ax1.hist(data, bins=50)
-    ax2.plot(gam.x, gam.y)
+    ax1.hist(gamPDFMo.data, bins=50)
+    ax2.plot(gamPDFPy.x, gamPDFPy.y)
     ax1.grid()
     ax2.grid()
 
@@ -66,14 +77,9 @@ def main():
     parser = GetParser()
     args = parser.parse_args()
     rct_outputs = [1, 2, 3]
-    gam = GammaPicker(rct_outputs)
-    if os.path.isfile(PATH_IN):
-        PATH = PATH_IN
-    else:
-        PATH = PATH_IN_ALT
-    data = np.loadtxt(PATH, delimiter=',')
-    print(data)
-    plot_data(data, gam)
+    gamPDFPy = GammaPDFPython()
+    gamPDFMo = GammaPDFMonero()
+    plot_data(gamPDFMo, gamPDFPy)
     #plot_function(data)
     
 if __name__ == "__main__":
