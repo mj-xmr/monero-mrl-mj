@@ -47,7 +47,7 @@ def plot_function(data):
 def main():
     parser = GetParser()
     args = parser.parse_args()
-    data = np.loadtxt(decoy_consts.PATH_MUL_2_RATIO_GOOD, delimiter=',')
+    data = decoy_consts.load_data(decoy_consts.PATH_MUL_2_RATIO_GOOD)
     #print(data)
     plot_data(data)
     #plot_function(data)

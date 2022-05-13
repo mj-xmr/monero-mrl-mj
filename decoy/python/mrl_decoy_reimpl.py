@@ -30,7 +30,7 @@ class GammaPDFPython():
 
 class GammaPDFMonero():
     def __init__(self):
-        self.data = np.loadtxt(decoy_consts.PATH_GAMMA_PDF, delimiter=',')
+        self.data = decoy_consts.load_data(decoy_consts.PATH_GAMMA_PDF)
         print(self.data)
 
 class GammaPickerPyhon():
