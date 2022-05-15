@@ -27,7 +27,7 @@ class GammaRVSPython():
         self.y = []
         for i in range(0, num_samples):
             self.y.append(gamma.rvs(a=shape, scale=scale))
-        print(self.y)
+        #print(self.y)
 
 
 class GammaPDFPython():
