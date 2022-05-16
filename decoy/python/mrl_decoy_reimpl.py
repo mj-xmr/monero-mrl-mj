@@ -43,11 +43,12 @@ class GammaRVSMonero():
         self.data = decoy_consts.load_data(decoy_consts.PATH_GAMMA_PDF)
         print(self.data)
 
-"""
+
 class GammaPickerPyhon():
     def __init__(self, rct_offsets, shape=decoy_consts.GAMMA_SHAPE, scale=decoy_consts.GAMMA_SCALE):
-        gamma = std::gamma_distribution<double>(shape, scale);
+        #gamma = std::gamma_distribution<double>(shape, scale);
         THROW_WALLET_EXCEPTION_IF(rct_offsets.size() <= CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE, error::wallet_internal_error, "Bad offset calculation");
+        """
         const size_t blocks_in_a_year = 86400 * 365 / DIFFICULTY_TARGET_V2;
         const size_t blocks_to_consider = std::min<size_t>(rct_offsets.size(), blocks_in_a_year);
         const size_t outputs_to_consider = rct_offsets.back() - (blocks_to_consider < rct_offsets.size() ? rct_offsets[rct_offsets.size() - blocks_to_consider - 1] : 0);
@@ -57,6 +58,8 @@ class GammaPickerPyhon():
         THROW_WALLET_EXCEPTION_IF(num_rct_outputs == 0, error::wallet_internal_error, "No rct outputs");
         awaitoutput_time = DIFFICULTY_TARGET_V2 * blocks_to_consider / static_cast<double>(outputs_to_consider); // this assumes constant target over the whole rct range
 
+    """
+"""
     def pick()
     {
       double x = gamma(engine);
