@@ -64,9 +64,10 @@ class GammaPickerPyhon():
         num_rct_outputs = rct_offsets[end - 1];
         THROW_WALLET_EXCEPTION_IF(num_rct_outputs == 0, "error::wallet_internal_error", "No rct outputs");
         awaitoutput_time = decoy_consts.DIFFICULTY_TARGET_V2 * blocks_to_consider / float(outputs_to_consider); # // this assumes constant target over the whole rct range
-"""
-    def pick()
-    {
+
+    def pick():
+        pass
+    """
       double x = gamma(engine);
       x = exp(x);
 
@@ -112,8 +113,7 @@ class GammaPickerPyhon():
         return std::numeric_limits<uint64_t>::max(); // bad pick
       MTRACE("Picking 1/" << n_rct << " in block " << index);
       return first_rct + crypto::rand_idx(n_rct);
-    };
-"""
+    """
 
 class GammaPickerMonero():
     def __init__(self, rct_offsets):
