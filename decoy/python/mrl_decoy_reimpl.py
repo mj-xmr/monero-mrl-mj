@@ -56,14 +56,14 @@ class GammaPickerPyhon():
         blocks_in_a_year = 86400 * 365 / decoy_consts.DIFFICULTY_TARGET_V2
         blocks_to_consider = min(len(rct_offsets), blocks_in_a_year)
         outputs_to_consider = rct_offsets[-1] - (rct_offsets[len(rct_offsets) - blocks_to_consider - 1] if blocks_to_consider < len(rct_offsets) else 0)
-    """
-        begin = rct_offsets.data();
-        end = rct_offsets.data() + rct_offsets.size() - CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE;
-        num_rct_outputs = *(end - 1);
-        THROW_WALLET_EXCEPTION_IF(num_rct_outputs == 0, error::wallet_internal_error, "No rct outputs");
-        awaitoutput_time = DIFFICULTY_TARGET_V2 * blocks_to_consider / static_cast<double>(outputs_to_consider); // this assumes constant target over the whole rct range
-
-    """
+    
+        begin = 0 # rct_offsets.data();
+        # end = rct_offsets.data() + rct_offsets.size() - CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE;
+        end = begin + len(rct_offsets) - decoy_consts.CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE
+        #num_rct_outputs = *(end - 1);
+        num_rct_outputs = rct_offsets[end - 1];
+        THROW_WALLET_EXCEPTION_IF(num_rct_outputs == 0, "error::wallet_internal_error", "No rct outputs");
+        awaitoutput_time = decoy_consts.DIFFICULTY_TARGET_V2 * blocks_to_consider / float(outputs_to_consider); # // this assumes constant target over the whole rct range
 """
     def pick()
     {
@@ -138,7 +138,8 @@ def plot_data(gamRVSMo, gamRVSPy, gamPDFPy):
 def main():
     parser = GetParser()
     args = parser.parse_args()
-    rct_outputs = list(range(0, decoy_consts.CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE + 1))
+    start = 1 # At start == 0 there's a corner case to test
+    rct_outputs = list(range(start, decoy_consts.CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE + 1 + start))
     
     GammaPickerPyhon(rct_outputs)
 
