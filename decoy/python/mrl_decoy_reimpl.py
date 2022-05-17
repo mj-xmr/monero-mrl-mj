@@ -43,15 +43,20 @@ class GammaRVSMonero():
         self.data = decoy_consts.load_data(decoy_consts.PATH_GAMMA_PDF)
         print(self.data)
 
+def THROW_WALLET_EXCEPTION_IF(cond, context, msg):
+    if cond:
+        raise Exception(context + ": " + msg)
 
 class GammaPickerPyhon():
     def __init__(self, rct_offsets, shape=decoy_consts.GAMMA_SHAPE, scale=decoy_consts.GAMMA_SCALE):
         #gamma = std::gamma_distribution<double>(shape, scale);
-        THROW_WALLET_EXCEPTION_IF(rct_offsets.size() <= CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE, error::wallet_internal_error, "Bad offset calculation");
-        """
-        const size_t blocks_in_a_year = 86400 * 365 / DIFFICULTY_TARGET_V2;
-        const size_t blocks_to_consider = std::min<size_t>(rct_offsets.size(), blocks_in_a_year);
-        const size_t outputs_to_consider = rct_offsets.back() - (blocks_to_consider < rct_offsets.size() ? rct_offsets[rct_offsets.size() - blocks_to_consider - 1] : 0);
+        
+        THROW_WALLET_EXCEPTION_IF(len(rct_offsets) <= decoy_consts.CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE, "error::wallet_internal_error", "Bad offset calculation")
+        
+        blocks_in_a_year = 86400 * 365 / decoy_consts.DIFFICULTY_TARGET_V2
+        blocks_to_consider = min(len(rct_offsets), blocks_in_a_year)
+        outputs_to_consider = rct_offsets[-1] - (rct_offsets[len(rct_offsets) - blocks_to_consider - 1] if blocks_to_consider < len(rct_offsets) else 0)
+    """
         begin = rct_offsets.data();
         end = rct_offsets.data() + rct_offsets.size() - CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE;
         num_rct_outputs = *(end - 1);
@@ -133,7 +138,11 @@ def plot_data(gamRVSMo, gamRVSPy, gamPDFPy):
 def main():
     parser = GetParser()
     args = parser.parse_args()
-    rct_outputs = [1, 2, 3]
+    rct_outputs = list(range(0, decoy_consts.CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE + 1))
+    
+    GammaPickerPyhon(rct_outputs)
+
+    return
     gamPDFPy = GammaPDFPython()
     gamRVSMo = GammaRVSMonero()
     gamRVSPy = GammaRVSPython()
