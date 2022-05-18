@@ -19,9 +19,10 @@ def GetParser():
 
     return parser
 
-def plot_data(data):
+def plot_data(data, title=""):
     fig, (ax1, ax2) = plt.subplots(1, 2)
-    #fig.suptitle('Horizontally stacked subplots')
+    if len(title):
+        fig.suptitle(title)
     ax1.scatter(data[:,0], data[:, 1])
     ax2.scatter(data[:,0], data[:, 1])
     
@@ -49,7 +50,7 @@ def main():
     args = parser.parse_args()
     data = decoy_consts.load_data(decoy_consts.PATH_MUL_2_RATIO_GOOD)
     #print(data)
-    plot_data(data)
+    plot_data(data, "Monero C++ gamma picker")
     #plot_function(data)
     
 if __name__ == "__main__":
