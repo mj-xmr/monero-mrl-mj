@@ -10,6 +10,8 @@ Documenting and experimenting on the Decoy Selection Algorithm.
 - With the Python implementation at hand, a mathematical expression of the decoy algo shall be derived
 
 ## Results
+### Gamma pickers
+Comparison of the final Gamma Picker's result. The differences may result at least from the different random samplers chosen in both implementations.
 
 ![cpp](https://user-images.githubusercontent.com/63722585/169068204-8e82eb8f-4151-48a9-85d4-c554cc231839.png)
 
@@ -17,7 +19,8 @@ Documenting and experimenting on the Decoy Selection Algorithm.
 
 
 
-## Comparison of Monero's and Python Gamma distribution
+### Gamma distributions
+The point of this comparison is to make sure, that the parameters of the distribution aren't misinterpreted across the two APIs.
 
 ![image](https://user-images.githubusercontent.com/63722585/167909725-0afb8d37-8f95-4fdb-9c0f-4eaa62a49a23.png)
 
