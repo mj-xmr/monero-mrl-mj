@@ -52,12 +52,9 @@ cd ..
 ```
 
 ```bash
-BRANCH_MRL=decoy
 
 git clone --recursive https://github.com/mj-xmr/monero-mrl-mj.git
 cd monero-mrl-mj
-git pull origin $BRANCH_MRL
-git checkout -b $BRANCH_MRL
 decoy/python/mrl_decoy_plot.py
 decoy/python/mrl_decoy_reimpl.py
 
