@@ -52,7 +52,7 @@ cd ..
 ```
 
 ```bash
-BRANCH_MRL=decoy
+BRANCH_MRL=decoy2
 
 git clone --recursive https://github.com/mj-xmr/monero-mrl-mj.git
 cd monero-mrl-mj
