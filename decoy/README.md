@@ -52,7 +52,6 @@ cd ..
 ```
 
 ```bash
-
 git clone --recursive https://github.com/mj-xmr/monero-mrl-mj.git
 cd monero-mrl-mj
 decoy/python/mrl_decoy_plot.py
