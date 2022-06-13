@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/bin/bash -e
 
 START=1
-END=10
+END=40
 for num in $(seq $START $END); do
 	echo "Num $num of $END 	C++"
 	date
-	rm /tmp/*.csv
+	rm /tmp/*.csv || true
 	DIR=/tmp/monero/decoy/decoy-$num
 	mkdir -p $DIR/cpp
 	mkdir -p $DIR/python

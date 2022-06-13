@@ -178,10 +178,10 @@ def full_run():
     
     fpath_template = '/tmp/picks_raw_py_mul_length'
     #picks_raw(100, fpath_template)
-    picks_raw(100000, fpath_template)
+    picks_raw(10000, fpath_template)
     
 
-    #return
+    return
     #max_element = 20
     #data1 = data1[:-max_element]
     #data2 = data2[:-max_element]

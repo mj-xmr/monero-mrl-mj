@@ -10,6 +10,7 @@ import secrets
 from scipy.stats import gamma
 import decoy_consts
 import mrl_decoy_plot
+import time
 
 class GammaPickerPyhon():
     def __init__(self, rct_offsets, shape=decoy_consts.GAMMA_SHAPE, scale=decoy_consts.GAMMA_SCALE):
@@ -73,14 +74,14 @@ class GammaPickerPyhon():
         output_index = int(x / self.average_output_time)
         if (output_index >= self.num_rct_outputs):
             return decoy_consts.uint64_t_MAX; # bad pick
-        output_index = self.num_rct_outputs - output_index; # TODO: Altered
-        # output_index = self.num_rct_outputs - 1 - output_index; # Original
+        #output_index = self.num_rct_outputs - output_index; # TODO: Altered
+        output_index = self.num_rct_outputs - 1 - output_index; # Original
         
         index = self.lower_bound(self.rct_offsets, output_index)
-        #if index < 0:
+        if index < 0:
             # TODO: This was added!
-         #   print("output_index of {} not found".format(output_index))
-        #    return decoy_consts.uint64_t_MAX # // bad pick
+            print("output_index of {} not found".format(output_index))
+            return decoy_consts.uint64_t_MAX # // bad pick
         self.THROW_WALLET_EXCEPTION_IF(index < 0, "error::wallet_internal_error", "output_index of {} not found".format(output_index))
 
         first_rct = 0 if index == 0 else self.rct_offsets[index - 1];
@@ -106,10 +107,12 @@ class GammaPickerPyhon():
 def experiment(NUM_DRAWS):
     """ For comparison against C++"""
     fpath_experiment = "/tmp/test"
-    fpath_experiment = ""
+    fpath_experiment = '/tmp/picks_raw_py_mul_length'
     mrl_decoy_plot.picks_raw(NUM_DRAWS, fpath_experiment)
 
-def main():
+def main():    
+    start_time = time.time()
+
     start = 1
     NUM_DRAWS = 40
     mul = 10000
@@ -122,7 +125,11 @@ def main():
     print("Len rct", len(rct_outputs))
     print(picks, mul)
     
-    experiment(NUM_DRAWS)
+    experiment(100000)
+
+    seconds = time.time() - start_time
+    hours = round(seconds / 3600, 2)
+    print("hours passed:", hours)
 
 if __name__ == "__main__":
     main()
