@@ -117,8 +117,7 @@ def picks_raw(NUM_DRAWS=100, output_file=''):
         if mul <= 1: # TODO: Should be <= 1, but it crashes so far
             pass
             break
-        start = 1 # At start == 0 there's a corner case to test
-        rct_outputs = list(range(start, int(decoy_consts.MIN_RCT_LENGTH * mul) + start))
+        rct_outputs = mrl_decoy_reimpl.gen_rct_outputs(mul)
         #print(rct_outputs)
         #print(len(rct_outputs))
         picker = mrl_decoy_reimpl.GammaPickerPyhon(rct_outputs)
@@ -177,8 +176,8 @@ def full_run():
     args = parser.parse_args()
     
     fpath_template = '/tmp/picks_raw_py_mul_length'
-    #picks_raw(100, fpath_template)
-    picks_raw(10000, fpath_template)
+    picks_raw(100, fpath_template)
+    #picks_raw(10000, fpath_template)
     
 
     return
