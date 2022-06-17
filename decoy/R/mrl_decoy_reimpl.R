@@ -13,6 +13,17 @@ MIN_RCT_LENGTH = CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE + 1
 
 
 
+gen_rct_outputs <- function(mul) {
+  start = 1
+  start:(floor(MIN_RCT_LENGTH * mul) + start)
+}
+
+mul = 1e5
+
+rct_outputs = gen_rct_outputs(mul)
+rct_offsets <- rct_outputs
+
+
 #self.THROW_WALLET_EXCEPTION_IF(len(rct_offsets) <= decoy_consts.CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE, "error::wallet_internal_error", "Bad offset calculation")
 
 blocks_in_a_year = as.integer(86400 * 365 / DIFFICULTY_TARGET_V2)
@@ -35,11 +46,6 @@ num_rct_outputs = rct_offsets[end - 1]
 #self.THROW_WALLET_EXCEPTION_IF(self.num_rct_outputs == 0, "error::wallet_internal_error", "No rct outputs");
 average_output_time = DIFFICULTY_TARGET_V2 * blocks_to_consider / as.numeric(outputs_to_consider); # // this assumes constant target over the whole rct range
 
-
-gen_rct_outputs <- function(mul) {
-  start = 1
-  start:(floor(MIN_RCT_LENGTH * mul) + start)
-}
 
 
 rand_idx <- function(maxVal) {
@@ -131,10 +137,9 @@ pick <- function() {
 
 
 
-mul = 1e5
 
-rct_outputs = gen_rct_outputs(mul)
-rct_offsets <- rct_outputs
+
+
 
 n.picks <- 1000000
 set.seed(314)
