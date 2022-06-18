@@ -10,6 +10,8 @@ import secrets
 from scipy.stats import gamma
 import decoy_consts
 import mrl_decoy_plot
+import mrl_decoy_plot_parallel
+
 import time
 
 class GammaPickerPyhon():
@@ -131,7 +133,7 @@ def experiment(NUM_DRAWS):
     """ For comparison against C++"""
     fpath_experiment = "/tmp/test"
     fpath_experiment = '/tmp/picks_raw_py_mul_length'
-    mrl_decoy_plot.picks_raw(NUM_DRAWS, fpath_experiment)
+    mrl_decoy_plot_parallel.picks_raw_parallel(fpath_experiment)
 
 def minimal():
     NUM_DRAWS = 1000
