@@ -6,10 +6,16 @@ Documenting and experimenting on the Decoy Selection Algorithm.
 
 - New unit tests shall be written, that cover the happy path and edge cases of the decoy algorithm
 - The nevralgic parts of the system shall be first experimentally probed and the results shall be gathered
-- An alternative Python (or R) implementation shall be prepared, since Python offers many statistical analysis and visualization tools. The correspondence between this and the original implementation shall be confirmed via the Kolmogorov-Smirnov test
-- With the Python implementation at hand, a mathematical expression of the decoy algo shall be derived
+- An alternative Python implementation shall be prepared, since Python offers many statistical analysis and visualization tools. The correspondence between this and the original implementation shall be confirmed via the Kolmogorov-Smirnov test
+- Based on the Python implementation, and R implementation shall be created and its results are confirmed via the same statistical tests
+- With the R implementation at hand, a mathematical expression of the decoy algo shall be derived
 
 ## Results
+
+Except for the last point, namely the mathematical expression, the research project already delivers satisfying results.
+
+## Visualization
+
 ### Gamma pickers
 Comparison of the final Gamma Picker's result. The differences may result at least from the different random samplers chosen in both implementations.
 
