@@ -85,8 +85,10 @@ These data can be compared against each other via:
 ./mrl_decoy_ks.py \
 -d1 /tmp/monero/decoy/decoy-1/python/picks_raw_py_mul_length_100000.csv \
 -d2 /tmp/monero/decoy/decoy-2/cpp/mrl_pick_mul_length_100000.csv
+
+./mrl_decoy_ks.py \
+-d1 /tmp/monero/decoy/decoy-1/python/picks_raw_py_mul_length_5.csv \
+-d2 /tmp/monero/decoy/decoy-2/cpp/mrl_pick_mul_length_5.csv
 ```
 
-... and so on.
-
-
+... and so on. The number suffix of the data files is the multiple of minimum length, at which the algorithm may start to deliver expected results.
