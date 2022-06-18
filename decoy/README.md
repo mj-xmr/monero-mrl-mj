@@ -91,4 +91,4 @@ These data can be compared against each other via:
 -d2 /tmp/monero/decoy/decoy-2/cpp/mrl_pick_mul_length_5.csv
 ```
 
-... and so on. The number suffix of the data files is the multiple of minimum length, at which the algorithm may start to deliver expected results.
+... and so on. The number suffix of the data files is a multiple of the minimum length, at which the algorithm may start to deliver expected results.
