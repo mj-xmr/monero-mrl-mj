@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-START=10
+START=1
 END=40
 
 FILE_STATUS="/tmp/mrl-status.txt"
