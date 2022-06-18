@@ -64,7 +64,7 @@ decoy/python/mrl_decoy_reimpl.py
 ### Statistical tests
 
 In order to generate an abundence of test data, being able to perform statistical tests on them, 
-just run the foloowing script:
+just run the following script:
 
 ```bash
 cd decoy/python
