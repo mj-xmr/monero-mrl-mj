@@ -85,13 +85,7 @@ def plot_picks(values):
 def picks(NUM_DRAWS=100, output_file=''):
     offsets_ratios = []
 
-    mul = 1e5
-    #mul = 1e3 # For testing
-    while True:
-        if mul <= 1: # TODO: Should be <= 1, but it crashes so far
-            pass
-            break
-        mul = round(mul)
+    for mul in get_muls():
         num_hits = 0;
         start = 1 # At start == 0 there's a corner case to test
         rct_outputs = list(range(start, int(decoy_consts.MIN_RCT_LENGTH * mul) + start))
@@ -101,7 +95,6 @@ def picks(NUM_DRAWS=100, output_file=''):
         ratio_good_picks = picker.pick_n_values_ratio(NUM_DRAWS)
         print(ratio_good_picks, len(rct_outputs))
         offsets_ratios.append((mul, ratio_good_picks))
-        mul *= 0.85
 
     npa = np.array(offsets_ratios)
     if output_file:
@@ -112,17 +105,7 @@ def picks(NUM_DRAWS=100, output_file=''):
 def picks_raw(NUM_DRAWS=100, output_file=''):
     offsets_ratios = []
 
-    mulPrev = 0
-    mul = 1e5
-    #mul = 1e3 # For testing
-    while True:
-        if mul <= 1: # TODO: Should be <= 1, but it crashes so far
-            pass
-            break
-        mul = round(mul)
-        if mul == mulPrev:
-            break
-        mulPrev = mul
+    for mul in get_muls():
         rct_outputs = mrl_decoy_reimpl.gen_rct_outputs(mul)
         #print(rct_outputs)
         #print(len(rct_outputs))
@@ -134,8 +117,6 @@ def picks_raw(NUM_DRAWS=100, output_file=''):
             fname = output_file + "_{}.csv".format(math.floor(round(mul)))
             np.savetxt(fname, picks)
             print("Saved to", fname)
-
-        mul *= 0.85
 
     #npa = np.array(offsets_ratios)
 
@@ -160,6 +141,25 @@ def plot_data(gamRVSMo, gamRVSPy, gamPDFPy):
 def plot_picker_py(ratios):
     plot_cpp_distrib(ratios, "Python reimpl. gamma picker")
 
+def get_muls():
+    muls = []
+
+    mulPrev = 0
+    mul = 1e5
+    #mul = 1e1 # For testing
+    while True:
+        if mul <= 1: # TODO: Should be <= 1, but it crashes so far
+            pass
+            break
+        mul = round(mul)
+        if mul == mulPrev:
+            break
+        mulPrev = mul
+        muls.append(mul)
+        
+        mul *= 0.85
+    return muls
+
 def ks(data1, data2):
     # https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test
     print("Performing Kolmogorov-Smirnov test")
@@ -168,6 +168,8 @@ def ks(data1, data2):
 
 
 def simple_run():
+    plot = True
+    #plot = False
     parser = GetParser()
     args = parser.parse_args()
     data = decoy_consts.load_data(decoy_consts.PATH_MUL_2_RATIO_GOOD)
@@ -182,7 +184,7 @@ def full_run():
     args = parser.parse_args()
     
     fpath_template = '/tmp/picks_raw_py_mul_length'
-    picks_raw(100, fpath_template)
+    #picks_raw(100, fpath_template)
     #picks_raw(10000, fpath_template)
     
 

@@ -11,6 +11,7 @@ HOME = str(Path.home()) + "/"
 def get_data_path(file_name):
     DIR_TMP = '/tmp/'
     DIR_TMP_ALT = HOME + '/temp/monero/'
+    os.makedirs(DIR_TMP_ALT, exist_ok=True)
     optimistic = DIR_TMP + '/' + file_name
     #print("Optimistic", file_name, optimistic)
     if os.path.isfile(optimistic):
