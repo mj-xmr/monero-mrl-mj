@@ -36,6 +36,8 @@ The point of this comparison is to make sure, that the parameters of the distrib
 
 ## Usage
 
+### Plots
+
 Use these steps to recreate the above plots:
 
 ```bash
@@ -58,4 +60,27 @@ decoy/python/mrl_decoy_plot.py
 decoy/python/mrl_decoy_reimpl.py
 
 ```
+
+### Statistical tests
+
+In order to generate an abundence of test data, being able to perform statistical tests on them, 
+just run the foloowing script:
+
+```bash
+cd decoy/python
+bash mrl-decoy-loop.sh
+```
+
+As a result of running this script, there are going to be sets of data generated in: `/tmp/monero/decoy`.
+These data can be compared against each other via:
+
+```bash
+# Run Kolmogorov-Smirnov test:
+./mrl_decoy_ks.py \
+-d1 /tmp/monero/decoy/decoy-1/python/picks_raw_py_mul_length_100000.csv \
+-d2 /tmp/monero/decoy/decoy-2/cpp/mrl_pick_mul_length_100000.csv
+```
+
+... and so on.
+
 
