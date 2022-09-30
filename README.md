@@ -5,3 +5,4 @@ Experiments for the [Monero Research Lab](https://github.com/monero-project/rese
 ## Current subprojects
 
 - [Decoy algorithm reimplementation](decoy)
+- [Testnet framework](testnet-framework)
