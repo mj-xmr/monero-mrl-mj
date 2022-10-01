@@ -2,7 +2,9 @@
 
 DIR_THIS="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-DIR=/tmp/monero
+#DIR=/tmp/monero
+DIR=build
+
 PROJ=monero-mj
 mkdir -p $DIR && cd $DIR
 
@@ -14,5 +16,6 @@ else
 	cd $PROJ
 fi
 
+pwd
 cp -v $DIR_THIS/Dockerfile .
 sudo docker build .
