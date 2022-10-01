@@ -14,11 +14,5 @@ else
 	cd $PROJ
 fi
 
-
-
-
-
-
 cp -v $DIR_THIS/Dockerfile .
-
 sudo docker build .
