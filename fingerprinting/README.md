@@ -25,27 +25,32 @@ Except for the last point, namely the mathematical expression, the research proj
 
 ## Visualization
 
-### Gamma pickers
-Comparison of the final Gamma Picker's result. The differences may result at least from the different random samplers chosen in both implementations.
+### Unit tests
 
-![cpp](https://user-images.githubusercontent.com/63722585/169068204-8e82eb8f-4151-48a9-85d4-c554cc231839.png)
+![clsag uts](https://user-images.githubusercontent.com/63722585/200007357-559d604d-d610-4902-8ac5-45cc0d363e21.png)
 
-![py](https://user-images.githubusercontent.com/63722585/169068222-50321cd3-2919-418a-87e6-5e97c9e4eb07.png)
+### Patches CI
+
+![Patches CI](https://user-images.githubusercontent.com/63722585/200007682-022ecfc5-4bbc-4d17-80a3-11c5a297096f.png)
+
+### Fees linear
+
+![plot fees linear](https://user-images.githubusercontent.com/63722585/200007775-3e3300da-cb8f-4c25-9f83-6e1e3dda5c89.png)
+
+### Fees heightmap logarithmic scaling
+
+![plot fees heightmap logarithmic](https://user-images.githubusercontent.com/63722585/200007860-9522a705-55f7-4e50-82ec-0587eef1885e.png)
+
+### Fees heightmap linear scaling
+
+![plot fees heightmap linear](https://user-images.githubusercontent.com/63722585/200007958-8a1e9845-b306-4bbd-ad48-56ddab8fb989.png)
+
+Compare with Isthmus' fees plot:
+
+![Isthmus fees](https://user-images.githubusercontent.com/63722585/200008485-42e7fd03-ff30-46d5-8783-f5af43bdfb59.png)
 
 
 
-### Gamma distributions
-The point of this comparison is to make sure, that the parameters of the distribution aren't misinterpreted across the two APIs.
-
-![image](https://user-images.githubusercontent.com/63722585/167909725-0afb8d37-8f95-4fdb-9c0f-4eaa62a49a23.png)
-
-![gamma](https://user-images.githubusercontent.com/63722585/169069214-6f6bdebc-5daa-49d1-af01-bc3b3f37f9b9.png)
-
-
-
-## Unit tests
-
-![image](https://user-images.githubusercontent.com/63722585/165281752-8073a130-f46d-450f-9de8-a06c96fb96f5.png)
 
 
 
