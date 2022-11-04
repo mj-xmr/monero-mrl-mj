@@ -42,7 +42,7 @@ Line plot of the (logarithm) of fees:
 
 ### Fees heightmap logarithmic scaling
 
-The same in a different, clustered representation and log scaling:
+The same in a different, clustered representation and log scaling of the fee clusters:
 
 ![plot fees heightmap logarithmic](https://user-images.githubusercontent.com/63722585/200007860-9522a705-55f7-4e50-82ec-0587eef1885e.png)
 
