@@ -4,7 +4,7 @@ Documenting and experimenting on the fingerprinting of Monero's forks.
 
 ## Strategy
 
-- Because the test encompasses multiple Monero versions, a [multi-version compatible patch](https://github.com/mj-xmr/monero-patches/blob/master/src/mrl-decoy-fee-ut-clsag.patch) shall be maintained and tested for compatibility using GitHub Actions.
+- Because the fingerprinting test encompasses multiple Monero versions, a [multi-version compatible patch](https://github.com/mj-xmr/monero-patches/blob/master/src/mrl-decoy-fee-ut-clsag.patch) shall be maintained and tested for compatibility using GitHub Actions.
 - The differences in behavior captured across the relevant Monero versions are expected to be reflected in the forks, suspected of being fingerprintable. The methodology to collect & visualize the differences shall be as close to the Monero's patch, as possible.
 - A timeline shall be presented, that combines all the intervening, relevant versions of software, where it's easier to infer the chronology.
 - Plots shall be prepared as tools for manual inference, inspired by [Fingerprinting a flood](https://mitchellpkt.medium.com/fingerprinting-a-flood-forensic-statistical-analysis-of-the-mid-2021-monero-transaction-volume-a19cbf41ce60), by Mitchell P. Krawiec-Thayer, PhD (aka Isthmus).
