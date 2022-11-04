@@ -15,7 +15,7 @@ Documenting and experimenting on the fingerprinting of Monero's forks.
 
 ## Results
 
-Except for the last point, namely the mathematical expression, the research project already delivers satisfying results.
+Below are some preliminary results.
 
 ## Visualization
 
