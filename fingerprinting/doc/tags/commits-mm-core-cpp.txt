@@ -1,0 +1,160 @@
+2022-09-12 17:55:35 | mm-core-cpp-c 	| 01d147b 		| Merge pull request #44 from mymonero/merge-webassembly-cleanup
+2022-08-24 20:09:24 | mm-core-cpp-c 	| 64c37a6 		| Merge pull request #40 from mymonero/fixesForHardForkv15
+2022-08-23 12:25:59 | mm-core-cpp-c 	| 63f7fd9 		| updated handling to be in accordance with Monero hard fork v15: changed fixed ring size from 11 to 16, added handling for bp_version = 4 to represent bulletproof plus, and in call to construct_tx_and_get_tx_key passed in true for variable representing use_view_tags
+2022-07-31 11:31:19 | mm-core-cpp-c 	| eabedb9 		| Merge pull request #38 from ndorf/master
+2022-07-30 20:15:21 | mm-core-cpp-c 	| 16362d0 		| Update monero-core-custom to 0.18.0.0
+2022-07-18 12:52:50 | mm-core-cpp-c 	| 946829f 		| Merge pull request #36 from j-berman/tie-outs-to-mix-outs
+2022-07-14 12:14:14 | mm-core-cpp-c 	| 638dc7f 		| Merge pull request #35 from j-berman/clsag-fees
+2022-07-14 12:13:50 | mm-core-cpp-c 	| 4de7706 		| Merge pull request #34 from ndorf/fix_warnings
+2022-07-14 12:13:34 | mm-core-cpp-c 	| 1c7c1d7 		| Merge pull request #33 from ndorf/master
+2022-07-11 18:58:31 | mm-core-cpp-c 	| 71e7983 		| update async__send_funds to re-use decoys across tx attempts
+2022-07-11 17:24:41 | mm-core-cpp-c 	| 9feaade 		| Update serial_bridge to re-use decoys across attempts + cleaning
+2022-03-09 21:21:05 | mm-core-cpp-c 	| a1ad13b 		| typos
+2022-03-07 21:07:51 | mm-core-cpp-c 	| f85744e 		| small documentation fixes
+2022-03-07 07:27:09 | mm-core-cpp-c 	| 77205f1 		| add test for new tie outs to mix outs function as per endogenic
+2022-03-07 07:20:17 | mm-core-cpp-c 	| 304e306 		| endogenic comments
+2022-02-28 02:58:43 | mm-core-cpp-c 	| 2a5d944 		| Re-use the same set of outs and associated mix outs across tx construction attempts
+2022-02-28 02:55:41 | mm-core-cpp-c 	| 9032a05 		| Update fee calc to use CLSAG + other minor changes
+2021-10-25 19:17:32 | mm-core-cpp-c 	| 1524da2 		| Fix missing return statements
+2021-10-25 19:17:25 | mm-core-cpp-c 	| ebf1677 		| Eliminate pointless string temporaries
+2021-10-25 19:17:19 | mm-core-cpp-c 	| 3c65f29 		| #import is not a real thing, use #include instead
+2021-08-11 20:06:22 | mm-core-cpp-c 	| dbd66b1 		| webassembly-cleanup branch changes
+2021-06-08 11:42:09 | mm-core-cpp-c 	| 79413fb 		| Update monero-core-custom to 0.17.2.0
+2020-10-19 19:29:12 | mm-core-cpp-c 	| a53e57f 		| Merge pull request #32 from ndorf/master
+2020-10-15 12:11:48 | mm-core-cpp-c 	| 15b6d0c 		| Support RingCT type 5 (CLSAG)
+2020-10-15 12:02:29 | mm-core-cpp-c 	| e1ff763 		| Update monero-core-custom to 0.17.0.0
+2019-11-15 15:43:04 | mm-core-cpp-c 	| 68ec454 		| updated monero-core-custom to 0.15 initial
+2019-03-25 14:25:40 | mm-core-cpp-c 	| 20b6cba 		| Merge pull request #28 from ExodusMovement/estimate-fee
+2019-03-22 14:18:44 | mm-core-cpp-c 	| e8c0a4f 		| Add estimate_tx_weight
+2019-03-22 13:15:30 | mm-core-cpp-c 	| a0c410c 		| Add estimate-fee
+2019-03-21 18:21:36 | mm-core-cpp-c 	| 3743ca9 		| added serial_bridge_utils none_or_double_from, none_or_bool_from
+2019-03-08 14:14:19 | mm-core-cpp-c 	| bb3baad 		| updated estimated_tx_network_fee, and the step1 and step2 functions with fork_version support
+2019-03-08 13:32:53 | mm-core-cpp-c 	| bba8fff 		| Merge pull request #27 from ndorf/feature/server_fork_rules
+2019-03-06 15:48:19 | mm-core-cpp-c 	| d9aa140 		| Don't use newest fork rules if server sends an earlier version
+2019-03-06 14:39:55 | mm-core-cpp-c 	| d09f13a 		| Remove comments
+2019-03-06 14:35:32 | mm-core-cpp-c 	| 03980e5 		| Update decodeRctSimple to support bulletproof2
+2019-03-06 10:50:36 | mm-core-cpp-c 	| 95b6528 		| Merge pull request #26 from ndorf/feature/rct_v2_squashed
+2019-03-06 09:46:51 | mm-core-cpp-c 	| 58d604f 		| Revert unintentional submodule update
+2019-03-06 09:13:05 | mm-core-cpp-c 	| 48aa7de 		| Merge pull request #24 from ndorf/feature/rct_v2_squashed
+2019-03-06 09:12:00 | mm-core-cpp-c 	| 1c54b93 		| Merge pull request #25 from ExodusMovement/upgrade-decode-rct-simple
+2019-03-05 22:11:58 | mm-core-cpp-c 	| e8923bc 		| Support new format of output.rct field
+2019-03-01 18:21:05 | mm-core-cpp-c 	| 71e3830 		| updated decodeRct and decodeRctSimple to handle type RCTTypeBulletproof2
+2019-02-26 11:57:34 | mm-core-cpp-c 	| e27621f 		| updated core-custom for 0.14.0.0 fork and monero_transfer_utils for new construct_tx_and_get_tx_key interface
+2019-02-07 14:01:36 | mm-core-cpp-c 	| 3b7cc01 		| monero_transfer_utils: not throwing invalid pid for empty pid str
+2019-02-05 13:25:53 | mm-core-cpp-c 	| ec5467b 		| factored LightwalletAPI_Req_* -> json str creation fns
+2019-01-28 07:46:34 | mm-core-cpp-c 	| 36af617 		| updated bridge__transfers__send__amountWOnlyDusty to not expect needed more money than found error
+2019-01-28 07:32:29 | mm-core-cpp-c 	| 0f8bfd3 		| Merge pull request #23 from ExodusMovement/guten/upstream-includes-dust-utxos
+2019-01-26 13:51:17 | mm-core-cpp-c 	| 58ada5b 		| Keep dust utxo if mixable, no matter sweeping or not
+2019-01-25 14:57:14 | mm-core-cpp-c 	| 00c9639 		| removed emscr_async_send_bridge again
+2019-01-25 12:59:08 | mm-core-cpp-c 	| ca15366 		| added bool->str to serial_bridge_utils - this can probably be improved with a fn using a generic type
+2019-01-24 14:49:55 | mm-core-cpp-c 	| df52b0d 		| added is_a_valid_or_not_a_payment_id to monero_paymentID_utils
+2019-01-17 11:27:23 | mm-core-cpp-c 	| cd84908 		| moved emscr_async_send_bridge to this repo from core-js
+2019-01-16 18:06:49 | mm-core-cpp-c 	| 1820b0e 		| Merge pull request #22 from ndorf/master
+2019-01-16 12:26:06 | mm-core-cpp-c 	| ff849f2 		| fix CMake compile option setting
+2019-01-11 12:08:59 | mm-core-cpp-c 	| ad3a61b 		| corrected caps mnemonic test case data
+2019-01-11 12:03:21 | mm-core-cpp-c 	| 7e543e0 		| caps agnostic mnemonic test case; added missing fee_mask to test
+2019-01-09 20:02:16 | mm-core-cpp-c 	| 1e3c5a2 		| readme: fee_mask
+2019-01-09 17:01:09 | mm-core-cpp-c 	| 365f4a1 		| added fee_mask support
+2019-01-08 09:18:19 | mm-core-cpp-c 	| 19d189a 		| fixed format
+2019-01-08 09:17:03 | mm-core-cpp-c 	| bb1084e 		| fixed contributors section
+2019-01-08 09:12:57 | mm-core-cpp-c 	| bc6acbe 		| authors and contributors section
+2019-01-07 17:55:15 | mm-core-cpp-c 	| 3b1cd7a 		| Added encrypt_payment_id
+2019-01-07 12:24:34 | mm-core-cpp-c 	| 888098e 		| added missing pass by ref for ptree in api_fetch_cb_fn arg
+2019-01-07 10:27:51 | mm-core-cpp-c 	| 966f137 		| fixed pre-rct out .rct field empty detection
+2019-01-07 08:57:40 | mm-core-cpp-c 	| 57c6e6c 		| Merge pull request #21 from ExodusMovement/develop
+2019-01-05 11:28:26 | mm-core-cpp-c 	| 07b76fe 		| c8ec760b5f881edbc4e8b9704 c 2018 -> 2019
+2018-12-21 16:32:34 | mm-core-cpp-c 	| f59f20b 		| Merge branch 'develop' of github.com:mymonero/mymonero-core-cpp into develop
+2018-12-21 16:31:48 | mm-core-cpp-c 	| 0159c21 		| added derivation_to_scalar, decodeRctSimple, and estimate_rct_tx_size
+2018-12-13 00:47:17 | mm-core-cpp-c 	| 680b4e4 		| Fix decodeRctSimple test: typo
+2018-12-12 11:49:49 | mm-core-cpp-c 	| 33abf15 		| Merge pull request #14 from ExodusMovement/guten/fix-decode-rct-simple-test
+2018-12-12 10:44:24 | mm-core-cpp-c 	| 0b577dd 		| Merge pull request #10 from ExodusMovement/guten/derivation_to_scalar
+2018-12-12 10:38:27 | mm-core-cpp-c 	| 31f5f4d 		| Merge pull request #11 from ExodusMovement/guten/decode_rct_simple
+2018-12-07 22:45:41 | mm-core-cpp-c 	| fb9b24d 		| Merge branch 'develop' of github.com:mymonero/mymonero-core-cpp into develop
+2018-12-07 22:45:27 | mm-core-cpp-c 	| a143ee2 		| monero_send_routine: replacing pass-by-ref since that was not the real issue
+2018-12-05 20:56:27 | mm-core-cpp-c 	| a60835b 		| Merge branch 'develop' of github.com:mymonero/mymonero-core-cpp into develop
+2018-12-05 20:07:42 | mm-core-cpp-c 	| e114493 		| async_send_funds args: copies instead of refs to prevent going out of scope exceptions
+2018-12-04 20:49:16 | mm-core-cpp-c 	| d0d7584 		| Merge pull request #12 from ExodusMovement/guten/estimate_rct_tx_size
+2018-12-03 20:05:59 | mm-core-cpp-c 	| 7074161 		| ndorf: Pass ptree by const ref
+2018-11-26 17:18:30 | mm-core-cpp-c 	| 649290a 		| test_all: fixed test log name
+2018-11-26 13:37:19 | mm-core-cpp-c 	| c51f8bf 		| removed emscr async bridge from CMakeLists
+2018-11-22 10:19:48 | mm-core-cpp-c 	| 1fd7d42 		| Added estimate_rct_tx_size
+2018-11-21 15:13:17 | mm-core-cpp-c 	| f896490 		| Added decodeRctSimple
+2018-11-21 13:25:08 | mm-core-cpp-c 	| 10ebb31 		| Added derivation_to_scalar
+2018-11-13 17:49:55 | mm-core-cpp-c 	| 399d3fa 		| Implemented async monero send routine
+2018-11-13 13:25:11 | mm-core-cpp-c 	| 41fbc55 		| added bridge__mainnet_pubKeyDerivations test case to verify output ownership in generated txs; monero_transfer_utils / serial_bridge_index: exposed tx_pub_key retVal .. one possible addtl retVal would be the output pub keys.. but is there a use in non-test envs for that data?
+2018-11-12 16:04:36 | mm-core-cpp-c 	| e9d411d 		| updated monero_wallet_utils::decoded_seed with support to sanitize mnemonic string input with redundant and illegal whitespace chars, and updated tests; fixed bug in same function which prevented to_lower() call from being effective
+2018-11-12 15:31:42 | mm-core-cpp-c 	| 91048e3 		| info about boost deps
+2018-11-12 15:25:48 | mm-core-cpp-c 	| 0f6a76e 		| README: rephrase
+2018-11-06 14:15:38 | mm-core-cpp-c 	| 13b943d 		| integrating openmonero's fix for mymonero-app-js#240 for spending rct coinbase outs
+2018-11-02 21:27:02 | mm-core-cpp-c 	| 6f11fff 		| monero_transfer_utils: minor comment clarifications, formatting, and checking (basically impossible) err retval from _rct_hex_to_decrypted_mask; test_all: added stagenet coinbase outputs send test
+2018-10-30 16:34:34 | mm-core-cpp-c 	| aea00b3 		| monero_transfers_utils removed unused line that caused extra copy
+2018-10-30 16:27:17 | mm-core-cpp-c 	| cf11304 		| README: minor updates
+2018-10-30 16:26:06 | mm-core-cpp-c 	| 199482f 		| updated README for new send procedure calls, etc
+2018-10-30 13:31:24 | mm-core-cpp-c 	| 5b28402 		| README: notes about embedding C++; initial notes about updates to Send calls
+2018-10-24 16:21:06 | mm-core-cpp-c 	| f95ab37 		| README: minor updates to bridge API docs for fees
+2018-10-24 16:20:40 | mm-core-cpp-c 	| c71b31c 		| validate components for login: disallowing subaddrs
+2018-10-23 16:21:45 | mm-core-cpp-c 	| ee3eede 		| send step2 clarified arg sending_amount as final_total_wo_fee
+2018-10-23 15:22:30 | mm-core-cpp-c 	| 9ed97d0 		| commented some new logs - it would be nice to enable these later
+2018-10-23 15:12:14 | mm-core-cpp-c 	| 8c81237 		| send: tweaked step2 name
+2018-10-23 14:56:36 | mm-core-cpp-c 	| 7874458 		| serial_bridge: added missing err_msg when errCode on new send fns
+2018-10-23 13:52:06 | mm-core-cpp-c 	| 617659c 		| fixed bug when sending to subaddrs - cryptonote_tx_utils takes a list of tx_destination_entrys which it assumes have got their is_subaddr flags set correctly - and the flag that the to-address is a subaddress didn't get ported from cn_utils construct/create tx because we didn't need to do it in core-js to add subaddr support there – given that in core-js we modified the pub key for subaddr sending by directly detecting whether the dst addr is a subaddr – a difference from cryptonote_tx_utils. funds that were sent using the faulty subaddr support are not lost and are recoverable because only the tx pub key of the txs was incorrectly written - if the correct tx pub key is generated and use for that tx then funds can be scanned and sent from the correct receiving wallet - mymonero-app-js#237
+2018-10-22 16:48:40 | mm-core-cpp-c 	| a9daf4c 		| ported of send_coins.js / SendFunds() to C++, incl initial block weight support (previous commit already updated fee); set a few 'rct' lookups from get() to get_optional() in serial bridge (likely bugfix for pre rct outs - probably was the cause of some exceptions); returning tx and txBlob_byteLength from convenience__create_transaction for send fns; removed now unnecessary calculate_fee, estimate_rct_tx_size, create_transaction from bridge (encapsulated in send routine).. switched estimated_tx_network_fee over to fee_per_b (API change - the app-side bridge will take fee_per_kb with optl fee_per_b, preferring the latter and converting the former to b by /= 1024
+2018-10-20 13:44:56 | mm-core-cpp-c 	| bb9e55d 		| initial fee updates for block weight based tx construction; moved some functions around (+monero_fee_utils)
+2018-10-18 12:29:14 | mm-core-cpp-c 	| 4ae115f 		| submod coms
+2018-10-18 11:15:14 | mm-core-cpp-c 	| d8d3c0f 		| monero_wallet_utils: switched from memcpy to .data() access
+2018-10-18 11:14:52 | mm-core-cpp-c 	| 1362364 		| submod: new commits
+2018-10-17 16:59:04 | mm-core-cpp-c 	| 69d6963 		| updated to 0.13.0.3
+2018-10-15 17:40:08 | mm-core-cpp-c 	| 637ba20 		| note about develop branch / git flow
+2018-10-15 17:31:28 | mm-core-cpp-c 	| d8aa609 		| updated test_all with ringsize 11 test data for create_transaction, and removed partially redundant create_transaction test so only one dataset has to be maintained (and since coverage is basically the same)
+2018-10-10 18:09:46 | mm-core-cpp-c 	| a1b0aab 		| test_all: updating 1/3 failing tests, BOOST_AUTO_TEST_CASE(bridged__estimate_rct_tx_size)
+2018-10-10 18:01:59 | mm-core-cpp-c 	| 3d81b96 		| updating fixed_ringsize from 7 to 11
+2018-10-01 17:47:41 | mm-core-cpp-c 	| db90557 		| removed new_fake_address_for_rct_tx as it's already in create_transaction
+2018-09-25 10:34:29 | mm-core-cpp-c 	| 55f2ac8 		| monero_address_utils: BOOST_THROW_EXCEPTION -> THROW_WALLET_EXCEPTION_IF
+2018-09-21 18:31:21 | mm-core-cpp-c 	| 856d882 		| fixed address_and_keys_from_seed arg name
+2018-09-21 18:15:46 | mm-core-cpp-c 	| 1054d0c 		| removed accidentally committed debug log
+2018-09-21 18:09:38 | mm-core-cpp-c 	| 5d2e6db 		| uint -> unsigned int for emscripten
+2018-09-21 18:06:42 | mm-core-cpp-c 	| 916b154 		| added address_and_keys_from_seed (renamed from create_address in old mymonero-core-js), generate_key_derivation, derive_public_key, derive_subaddress_public_key, and decodeRct
+2018-09-17 12:43:14 | mm-core-cpp-c 	| a6e414d 		| README: mentioning sec spend key and seed are optional in validate_components_for_login
+2018-09-16 19:58:13 | mm-core-cpp-c 	| aca5f31 		| serial_bridge_index: validate components for login: sec spend key and seed: added missing get_optionals to expose view-only login
+2018-08-29 17:51:02 | mm-core-cpp-c 	| e8620e3 		| serial_bridge_index: changed .get for rct to get_optional
+2018-08-29 17:35:37 | mm-core-cpp-c 	| 4f62643 		| README with JSON bridge docs
+2018-08-28 19:14:54 | mm-core-cpp-c 	| 95f140f 		| some cleanups per feedback
+2018-08-28 17:51:01 | mm-core-cpp-c 	| 31c63e2 		| exposed create_transaction unlock_time via bridge
+2018-08-28 17:48:53 | mm-core-cpp-c 	| a2c1036 		| create_transaction: checking output amount overflow before addition
+2018-08-28 16:25:05 | mm-core-cpp-c 	| 37d01a8 		| added missing to_addr to prev commit's dsts (regression - funds didn't appear at target)
+2018-08-28 15:57:07 | mm-core-cpp-c 	| 08edc0b 		| modified the interface to create transactions to remove requirement to construct and send dsts with either change or fake dst, by exposing change amount as param and uncommenting kept change addr / dsts construction - which actually solves a tx not created bug when sending to an addr (who is not oneself) with a short pid
+2018-08-28 14:22:51 | mm-core-cpp-c 	| c12e98f 		| having err code json ret include err_msg
+2018-08-27 22:58:08 | mm-core-cpp-c 	| a5fc7ef 		| removed requirement to pass dsts[i].is_subaddress via bridge
+2018-08-27 17:50:32 | mm-core-cpp-c 	| 4032bc1 		| language code support for checking prefix instead of full string
+2018-08-27 15:47:15 | mm-core-cpp-c 	| dd28854 		| removed some exceptions when the error should be allowed to be passed back
+2018-08-27 15:31:48 | mm-core-cpp-c 	| 33be2fe 		| added mnemonic_language_from_code and convenience__new_wallet_with_language_code, updating newly_created_wallet to take language code and return mnemonic_language
+2018-08-27 13:01:25 | mm-core-cpp-c 	| 9a9d9cb 		| added tx_key to create_transaction ret vals
+2018-08-24 16:33:19 | mm-core-cpp-c 	| 30d0891 		| fixed nettype in call to seed and keys from mnemonic and removed defaults from those args to prevent similar
+2018-08-24 16:01:22 | mm-core-cpp-c 	| 8c17ae4 		| changed passing of mnemonic_string by value to by ref and taking copy for normalization to simplify interface; returning detected mnemonic language from wallet_with rather than requiring it; added are_equal_mnemonics function
+2018-08-24 15:07:31 | mm-core-cpp-c 	| d599d30 		| CMakeLists: constrained linked boost libs
+2018-08-22 20:51:35 | mm-core-cpp-c 	| 27efeb8 		| updated to mooo's new openssl-less bulletproofs impl and removed openssl
+2018-08-21 15:45:55 | mm-core-cpp-c 	| b570efb 		| test_all: factored to args_string_from_root
+2018-08-20 13:12:59 | mm-core-cpp-c 	| 78c656f 		| monero-core-custom commits
+2018-08-20 13:08:46 | mm-core-cpp-c 	| 18f1364 		| serial_bridge_index: factored ret_json_from_root and turned pretty-print off
+2018-08-18 21:33:01 | mm-core-cpp-c 	| ecb9d70 		| bridged__generate_key_image
+2018-08-18 21:14:16 | mm-core-cpp-c 	| 8f25d55 		| log prefix improvement
+2018-08-18 21:10:41 | mm-core-cpp-c 	| 05147ea 		| fee fns
+2018-08-18 18:49:20 | mm-core-cpp-c 	| 45b2d42 		| bridged__validate_components_for_login, and fixed up some ref passing
+2018-08-18 15:21:00 | mm-core-cpp-c 	| 4aaef3d 		| seed_and_keys_from_mnemonic
+2018-08-18 14:18:35 | mm-core-cpp-c 	| e74c266 		| a2b2fddbf7e8cc6b892789b24d416 a few more serial bridge index integrations and tests
+2018-08-17 17:56:58 | mm-core-cpp-c 	| 6c19abf 		| bridged a few integrated and sub address accessors
+2018-08-16 20:57:04 | mm-core-cpp-c 	| 53a12f1 		| sketching remainder of required bridged fns; impl of decode_address bridge, replacing monero_address_utils isTestnet with nettype, and adding burned sec keys
+2018-08-16 16:28:46 | mm-core-cpp-c 	| 2ea3a47 		| added serial_bridge_index with JSON-bridged create tx, with new convenience create_transaction fn for extra construction etc, plus test
+2018-08-15 15:23:15 | mm-core-cpp-c 	| b896c29 		| added bin/update_submodules
+2018-08-06 09:53:00 | mm-core-cpp-c 	| e599578 		| implemented monero_transfer_utils::create_transaction
+2018-07-23 15:53:05 | mm-core-cpp-c 	| b72ebdc 		| added monero fork rules, migrated use_fork_rules_fn_type decl to it, added fee est convenience fn and fee test
+2018-07-23 12:22:35 | mm-core-cpp-c 	| 79f19b8 		| removed unused macro
+2018-07-23 12:21:00 | mm-core-cpp-c 	| 423aff4 		| some minor fixes and updates to parsing fns in monero_transfer_utils
+2018-07-23 12:04:18 | mm-core-cpp-c 	| 8a6f316 		| fix to last commit to compile
+2018-07-20 23:15:12 | mm-core-cpp-c 	| 22bb35b 		| key img nad monero tfer utils (w/o construct tx port yet) compiling w monero src update
+2018-07-19 20:48:42 | mm-core-cpp-c 	| 5f54c5a 		| decode addr test case
+2018-07-19 19:05:27 | mm-core-cpp-c 	| ba2901a 		| monero address utils compiling (depends on pid utils)
+2018-07-19 18:36:12 | mm-core-cpp-c 	| 77dce42 		| compiling monero base inclusion
+2018-07-19 17:06:38 | mm-core-cpp-c 	| 5abda04 		| initial (wip) test path
+2018-07-19 16:30:27 | mm-core-cpp-c 	| 7d50c44 		| gitignore
+2018-07-19 16:08:37 | mm-core-cpp-c 	| 62de5d1 		| added monero-core-custom as gitmodule

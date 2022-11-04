@@ -1,0 +1,194 @@
+2018-10-23 21:52:50 | mm-core-js 	| 789c1fa 		| breaking change to UnspentOuts hostedMoneroAPIClient method callback args: removed redundant unusedOutputs and switched over to mandatory return of per byte fee - prefers per b in API response with fallback to per kb for deploy rollover - per kb can be removed in the future
+2018-10-23 19:05:16 | mm-core-js 	| eb9db41 		| updated SendFunds to take number or string for amount - todo: migrate this to string only
+2018-10-23 18:42:14 | mm-core-js 	| 5611835 		| updated mymonero-core-cpp; updated bridge for new stepwise sending implementation (ported majority of SendFunds to C++ as send_step*_…; updated tests and removed removed bridge methods like calculate_fee, estimate rct tx size, and create_transaction; New: added tests/sendingFunds.spec.js as integration tests for new monero_sendingFunds_utils implementation - run with 'npm test -- tests/sendingFunds.spec.js'; CMakeLists: enabled ASSERTIONS
+2018-10-21 14:00:14 | mm-core-js 	| d60df76 		| archive-emcpp: comments about possible cp cmd errors
+2018-10-21 13:54:59 | mm-core-js 	| fdd92d9 		| CMakeLists: memory-init-file=0 (no .mem) option for asmjs builds since some clients like RN have trouble loading them -- this can be re-enabled as an option perhaps by cmake option
+2018-10-21 13:32:00 | mm-core-js 	| 20bf90c 		| removed final__pid_encrypt
+2018-10-19 13:22:35 | mm-core-js 	| 3d64d6e 		| added a way to build for and run asmjs
+2018-10-18 17:28:58 | mm-core-js 	| 979a130 		| sendingFunds: removed monero_openalias_utils as dep of SendFunds - was quite silly and wasn't even this repo
+2018-10-18 15:37:05 | mm-core-js 	| 319174b 		| added webpack browser library bundling process
+2018-10-18 12:50:22 | mm-core-js 	| 6ce669c 		| MyMoneroCoreBridge: setting est fee bulletproof flag default true; tests minor similar updates
+2018-10-18 12:34:45 | mm-core-js 	| 9c20339 		| updated emscripten build for 0.13.0.3 (enabled bulletproofs); updated emscripten to that built by 1.38.13 from 1.38.8; added boost::chrono fsyncobj now()
+2018-10-15 17:38:15 | mm-core-js 	| 0607e1e 		| mymonero core cpp updates - just its tests though
+2018-10-15 17:37:57 | mm-core-js 	| aa70f6c 		| package.json: v 1.1.0 for ringsize 11
+2018-10-11 16:03:18 | mm-core-js 	| 6932103 		| rebuild MyMoneroCoreCpp.(js,wasm) with updated ringsize cpp and updated tests with enough decoys to construct tx
+2018-10-11 16:00:50 | mm-core-js 	| cc4c1d2 		| removed old function
+2018-10-11 15:48:01 | mm-core-js 	| bbbb508 		| updated min ringsize to 11 - tests need to be updated
+2018-10-10 17:55:06 | mm-core-js 	| 56c1fe2 		| monero_utils: renderer wasm load timer duration += 20ms
+2018-10-10 17:37:35 | mm-core-js 	| f6d5727 		| fixed MyMoneroCoreBridge locateFile() to support Windows paths by detecting node directly and using path module.. and clarified comment
+2018-10-07 20:01:49 | mm-core-js 	| de5b19d 		| biginteger: exposed CONSTRUCT token for using constructor to recover JSON serialized bigintegers
+2018-10-01 17:49:28 | mm-core-js 	| b7ca015 		| deleted new_fake_address_for_rct_tx
+2018-10-01 17:08:14 | mm-core-js 	| 662b848 		| sendingFunds_utils: SendFunds(): changed sentAmount callback arg from float to JSBigInt
+2018-09-27 18:20:22 | mm-core-js 	| da0a95a 		| MyMoneroCoreBridge/api_safe_wordset_name: replaced capitalization with specific string match/mapping
+2018-09-27 18:19:19 | mm-core-js 	| bb00d6a 		| removed log
+2018-09-24 12:16:33 | mm-core-js 	| 44e1483 		| sendingFunds_utils: removed impls of estimateRctSize and calculate_fee plus calls to them by SendFunds() now that they're implemented in core-cpp
+2018-09-24 11:44:46 | mm-core-js 	| 632d060 		| README: note about create_address
+2018-09-24 10:26:05 | mm-core-js 	| fbee6fc 		| README: removed some tabs
+2018-09-24 10:19:35 | mm-core-js 	| 4961bda 		| MyMoneroCoreBridge: removed comment
+2018-09-24 10:19:25 | mm-core-js 	| e47c466 		| README: api docs
+2018-09-21 18:55:51 | mm-core-js 	| 299c0c4 		| added address_and_keys_from_seed (aka create_address in previous mymonero-core-js), generate_key_derivation, derive_public_key, derive_subaddress_public_key, and decodeRct
+2018-09-19 15:13:49 | mm-core-js 	| 0e48a02 		| cleaned up code around test declarations; revived a few old tests for new methods for #56, and added method scaffolds for them (incremental commit); replaced Jest with Mocha
+2018-09-18 19:05:39 | mm-core-js 	| a5866fc 		| Merge pull request #41 from mymonero/cpp
+2018-09-18 18:38:42 | mm-core-js 	| a4d7461 		| added mnemonic_languages.js utils
+2018-09-17 12:02:02 | mm-core-js 	| 1291374 		| package.json: removed old async dependency - zero deps\!
+2018-09-16 19:58:43 | mm-core-js 	| ade81ff 		| view only wallet login tests
+2018-09-07 16:55:03 | mm-core-js 	| 5518bf3 		| added wallet creation check
+2018-09-07 16:02:26 | mm-core-js 	| df24705 		| removed EstimatedTransaction_networkFee
+2018-09-07 15:50:02 | mm-core-js 	| 1675952 		| added calculate_fee, estimated_tx_network_fee, estimate_rct_tx_size bridge fns
+2018-09-07 15:26:38 | mm-core-js 	| ba5681b 		| renamed some tests; (partial) uncommented fee est fns
+2018-09-07 14:20:38 | mm-core-js 	| 0beee7d 		| txParsing/isTransactionConfirmed: checking nil height before comparison to prevent false positives
+2018-09-06 12:35:29 | mm-core-js 	| f6e497b 		| updated monero_utils to support calls which are safe over IPC to an electron remote from renderer proc's require
+2018-09-05 17:51:19 | mm-core-js 	| ef830ad 		| lots of moving things around; implemented promise constructor for monero_utils (which is actually MyMoneroCoreBridge, a new class to replace cnUtil).. this was chosen after trying both promises directly in the functions and async/await in one or two decent patterns in order to avoid the requirement that integrators support async/await and to retain the option for calls to monero_utils to remain synchronous - added src/module-post as a post-js in order to fix emscripten .then infinite loop ... this PR does not include any kind of support for calling from electron renderer to electron main - that is, the code to detect electron renderer, then intercept ret.err_msg and throw only if not in electron renderer, and relay ret.err_msg otherwise has been removed for the moment.. will likely be added back
+2018-09-04 15:55:33 | mm-core-js 	| 4a789ff 		| moved test file
+2018-09-04 15:37:12 | mm-core-js 	| 28f9246 		| fixed silly unterminated call stack regression in create transaction
+2018-09-04 15:06:31 | mm-core-js 	| 7de3cfc 		| removed Math.random replacement with throw pending merge of https://github.com/kripken/emscripten/pull/7096 and replaced Math.random in list rand index in monero_sendingFunds_utils
+2018-09-04 14:49:01 | mm-core-js 	| 1cd6a1d 		| updated MyMoneroCoreCpp with build that removed Math.random() usage
+2018-09-04 14:45:49 | mm-core-js 	| 85502fc 		| removed '_IPCSafe' suffix and added '_nonIPCSafe' to the other for clarity
+2018-09-04 14:02:37 | mm-core-js 	| 0381c76 		| tests: clarified how to load cryptonote_utils
+2018-09-04 13:56:51 | mm-core-js 	| d87f12b 		| added missing OnceModuleReady to bridged fns ... this might get replaced with promises
+2018-08-29 16:57:32 | mm-core-js 	| d68c264 		| cryptonote_utils/decode_address: added missing bool parse
+2018-08-29 16:29:32 | mm-core-js 	| a7c64bd 		| readme: removed empty library roadmap section; updated regular contributors
+2018-08-29 16:13:11 | mm-core-js 	| 3a764f5 		| removed old jest tests.. test which requires index.js triggers Math.random throw somehow.. crypto module / env probably not detected in emscripten.. considering dumping jest(..\?); --verbose on jest call
+2018-08-29 14:41:55 | mm-core-js 	| f5e6f1e 		| removed a bunch of tests which don't apply - they should be implemented on monero-core - this commit lacks updates to tests/cryptonote_utils.spec.js, some of which still apply
+2018-08-29 13:42:51 | mm-core-js 	| e073d27 		| monero_sendingFunds_utils: removed mixin param to SendFunds, returning mixin, and tx_key
+2018-08-29 12:41:16 | mm-core-js 	| 7aa962d 		| removed now unneccessary monero_wallet_utils wrapper fns
+2018-08-29 12:01:37 | mm-core-js 	| 06922f0 		| monero_paymentID_utils: removed (now-) old wrapper around monero_utils.new_payment_id
+2018-08-28 19:39:10 | mm-core-js 	| fb433f5 		| removing some now unused files and switching pid gen to monero_utils
+2018-08-28 19:18:05 | mm-core-js 	| 35c5839 		| cryptonote_utils: added unlock_time to create_tx call
+2018-08-28 19:17:26 | mm-core-js 	| ece0890 		| updated mymonerocorecpp with create tx tweaks from feedback
+2018-08-28 17:53:30 | mm-core-js 	| 0bad844 		| unlock_time exposed; updating to fixed output amount overflow check
+2018-08-28 16:48:39 | mm-core-js 	| e881939 		| removed a log
+2018-08-28 16:47:59 | mm-core-js 	| 1bdfe2c 		| updated cryptonote_utils and sendingFunds usage of create_transaction to move dsts to core cpp, passing change amount, etc
+2018-08-28 16:26:32 | mm-core-js 	| 360cfa8 		| added missing to addr to dsts in core cpp from last commit
+2018-08-28 16:00:17 | mm-core-js 	| f642865 		| updated mymonerocorecpp to remove need to send dsts to create tx and to fix short pid create tx issue
+2018-08-28 14:24:27 | mm-core-js 	| c9ccf85 		| err msg for code
+2018-08-27 23:10:17 | mm-core-js 	| 61426b0 		| cryptonote_utils: added migrations from throws to err_msg rets which somehow got dropped from a previous commit; integrated create_transactions, with necessary serialization prep / sanitization .. this required changing the interface slightly, as well as condensing the create_transaction and serialize_tx steps in monero_sendingFunds_utils
+2018-08-27 22:59:34 | mm-core-js 	| 34954b3 		| updated mymonerocorecpp to remove requirement to precompute/pass dsts is_subaddress
+2018-08-27 20:19:04 | mm-core-js 	| 0699298 		| preventing calls to Math.random given existence (but probable unreachability) of emscripten call; added window.crypto-based impl of 0-1 float getRandom
+2018-08-27 18:22:21 | mm-core-js 	| 6a328b6 		| removed newlycreatedwallet now-redundant interface fn; added core cpp support for language code -> mnemonic language; removed now unused rand gen fns from cryptonote_utils; added _monero_utils_i(instance)_nonthrowing for usage on an electron main process as remotely called by an electron renderer process, and added unpacking of err msgs to throws so as not to crash call to remote
+2018-08-27 17:52:48 | mm-core-js 	| a39bb6e 		| updated mymonerocorecpp for lang code prefix checking support
+2018-08-27 15:55:04 | mm-core-js 	| 4b38eff 		| updated mymonero core cpp to remove some exceptions
+2018-08-27 15:34:29 | mm-core-js 	| 49b7c51 		| updated mymonerocorecpp for language_code support
+2018-08-27 13:04:38 | mm-core-js 	| 5a8de61 		| updated mymonero-core-cpp to get tx_key in create_transaction and rebuilt mymonerocorecpp
+2018-08-24 16:50:49 | mm-core-js 	| 8790949 		| added missing mnemonic_language return
+2018-08-24 16:37:18 | mm-core-js 	| dfab720 		| fixed up nettype in seed_and_keys_from_mnemonic call; cryptonote_utils and monero_wallet_utils: moved mnemonic equals and language implementation to C++
+2018-08-24 16:09:57 | mm-core-js 	| a0f3bcd 		| bridged are_equal_mnemonics
+2018-08-23 19:25:52 | mm-core-js 	| 84c8db7 		| wallet and fake addr for rct tx method integrations; moved estimatedRctSize; moved tx parsing fns out of cryptonote_utils
+2018-08-23 13:46:10 | mm-core-js 	| 772fc34 		| updated estimateRctSize
+2018-08-23 13:02:58 | mm-core-js 	| 8dc79ad 		| switching back to wasm and optimizing via lto - we must be on the watch for regressions with LTO; removing link to various boost libs which are apparently unnecessary - surprised me, not sure I understand
+2018-08-22 21:04:44 | mm-core-js 	| b7a9963 		| some minor cleanups and rebuilds.. switching to O3 instead of Oz to retest speed of key img gen under asm.js before wasm given now no openssl dep
+2018-08-22 19:20:45 | mm-core-js 	| a7d31c8 		| removing openssl
+2018-08-22 19:13:38 | mm-core-js 	| 8bc0cbd 		| partial work to integrate new core - WIP, to now remove openssl
+2018-08-21 16:42:52 | mm-core-js 	| d517038 		| switching from wasm to asm.js for numerous reasons such as load time (currently, tradeoff is that seed-and-keys-from-mnemonic takes a long time for some reason, maybe keccak... keep JS impl?), switching optimizations to speed
+2018-08-21 14:14:39 | mm-core-js 	| 59a383c 		| bridged new serial_bridge_index methods and added all manual call test cases in MyMoneroCoreCpp_int.node.js - pending replacing JS API fns with these calls. this commit shows the first working POC of transpiling the major monero src to JS, and has shown that startup time must be optimized. that's currently a WIP.. contribution welcome
+2018-08-20 11:27:37 | mm-core-js 	| b9cdc19 		| removed monero-core-custom top lvl submod as it's now within mymonero-core-cpp
+2018-08-20 11:25:36 | mm-core-js 	| fad0bd5 		| new mymonero-core-cpp commits
+2018-08-15 15:11:40 | mm-core-js 	| 002bcaa 		| added new mymonero-core-cpp (aka …--new) as submodule, with bin/update_submodules and Readme update
+2018-08-15 14:11:41 | mm-core-js 	| 4d7eb47 		| build-openssl-emscripten.sh: fixed -i suffix
+2018-08-14 22:43:02 | mm-core-js 	| e58ff67 		| openssl build scripts -- pending bridge to new C++ impls, incl bulletproofs
+2018-08-04 22:36:19 | mm-core-js 	| 5ebcc30 		| removed a log
+2018-08-04 22:32:43 | mm-core-js 	| 902a352 		| updated MyMoneroCoreCpp.js build; cryptonote_utils: extracted destination formatting and money amount formatting to sendingFunds_utils and money_format_utils respectively, and added IPCsafe (string instead of JSBigInt params) create_transaction variant to support call from electron renderer procs etc, and added more complete load readiness waiting interface, and added locateFile impl for passing as emscripten Module template to locate wasm file in various environments; monero_cryptonote_utils_instance: detecting electron renderer and exposing via electron.remote call (will this cause issues with anyone's build systems trying to include electron\?); commenting logs
+2018-07-30 12:00:25 | mm-core-js 	| 92734c1 		| hostAPI/response_parser_utils: commented some logs
+2018-07-23 15:58:30 | mm-core-js 	| ad4d802 		| modified emcpp build script organization and added flags
+2018-07-16 15:59:34 | mm-core-js 	| 08730fe 		| readme updates
+2018-07-16 15:54:12 | mm-core-js 	| b529bdb 		| fix ups to emscripten build procedures; swapped cryptonote_crypto_EMSCRIPTEN with MyMoneroCoreCpp.(js,wasm), and had to introduce blocking to methods which use CNCrypto var due to new async Module init; updated Readme
+2018-07-13 18:38:31 | mm-core-js 	| 75a207d 		| boost buildchain (download expanded dir contents to contrib/boost-sdk .. may make it a locked submod later but leaving version open for now since we have working 1.6.7) & working monero src sc_reduce32 poc include + JS call
+2018-07-11 22:33:21 | mm-core-js 	| 3d24fc0 		| transition commit adding monero-core-custom, prior to adding boost
+2018-07-11 21:56:14 | mm-core-js 	| c046517 		| sc_reduce32 poc
+2018-07-11 20:48:24 | mm-core-js 	| 7a71485 		| initial emjs build & test chain impl - excluding it from global jest tests pending imminent wasm parent path fix PR merge
+2018-07-04 15:18:27 | mm-core-js 	| f69da79 		| corrected package.version to 1.0.0 to resolve #36
+2018-06-27 23:06:37 | mm-core-js 	| 37c86c2 		| Merge pull request #34 from HenryNguyen5/tests/ringct_simple
+2018-06-27 21:30:48 | mm-core-js 	| cc16607 		| Add test for simple rct signature generation
+2018-06-27 16:13:17 | mm-core-js 	| 0be0890 		| Merge pull request #33 from HenryNguyen5/test/range_proof_w_fee
+2018-06-27 16:06:39 | mm-core-js 	| 4618329 		| Add with_fee test, split out helper utils and clean up tests
+2018-06-27 15:59:49 | mm-core-js 	| 4d99ca6 		| Update comments for accuracy
+2018-06-27 15:49:13 | mm-core-js 	| 675b0c2 		| Merge pull request #32 from HenryNguyen5/test/range_proofs
+2018-06-27 15:29:44 | mm-core-js 	| 0f17dab 		| Have test fully pass
+2018-06-26 21:15:32 | mm-core-js 	| 9cde4ef 		| Change how  verRctMG is done
+2018-06-26 20:33:17 | mm-core-js 	| d976f88 		| Progress commit
+2018-06-25 20:46:10 | mm-core-js 	| 9b3bf23 		| Add partial test
+2018-06-25 20:45:49 | mm-core-js 	| eb0a5aa 		| Add verRct/Range/RctMG
+2018-06-25 15:40:07 | mm-core-js 	| 8dd8668 		| Merge pull request #31 from HenryNguyen5/test/add-tests
+2018-06-25 15:20:27 | mm-core-js 	| ad4fe49 		| Convert 2017 copyright -> 2018
+2018-06-25 15:15:10 | mm-core-js 	| 2fb735f 		| Add license files
+2018-06-25 15:11:04 | mm-core-js 	| d3845e9 		| Split up tests for parallel execution
+2018-06-25 14:11:19 | mm-core-js 	| 89a9138 		| Revert unused parameters removal
+2018-06-22 21:23:36 | mm-core-js 	| 0ef04da 		| Add MLSAG_ver and tests for MLSAG_gen
+2018-06-22 18:12:11 | mm-core-js 	| e4d6954 		| Add borromean tests, add verifyBorromean function
+2018-06-22 14:26:01 | mm-core-js 	| 7cc61a3 		| Remove console log
+2018-06-22 14:22:23 | mm-core-js 	| e264fed 		| Add ecdh encode/decode tests
+2018-06-22 14:21:36 | mm-core-js 	| dbdc2bb 		| Add node test env, ignore nacl for test coverage
+2018-06-22 14:21:24 | mm-core-js 	| f0f0f08 		| Expose d2s/d2h to api for testing
+2018-06-22 14:21:13 | mm-core-js 	| 2d0a24f 		| Add wallaby support (for editor integration)
+2018-06-21 17:13:23 | mm-core-js 	| 7d3b742 		| README: regular contributors
+2018-06-21 16:58:35 | mm-core-js 	| a343dd0 		| README: note about workflow
+2018-06-21 16:45:58 | mm-core-js 	| 612d936 		| Merge pull request #26 from HenryNguyen5/chore/add-jest
+2018-06-21 16:38:16 | mm-core-js 	| 3190004 		| Merge pull request #25 from HenryNguyen5/chore/add-prettier
+2018-06-21 16:33:09 | mm-core-js 	| 3bcaeaf 		| Add code coverage command
+2018-06-21 15:51:39 | mm-core-js 	| 922857b 		| Rename test file to be captured by Jest + fix invalid variable name
+2018-06-21 15:51:19 | mm-core-js 	| c903e1a 		| Fix incorrectly exported module
+2018-06-21 15:51:10 | mm-core-js 	| dc78f30 		| Add Jest depdendency
+2018-06-21 15:35:09 | mm-core-js 	| 6f3142a 		| Add prettier support
+2018-06-21 14:48:35 | mm-core-js 	| 87aaa28 		| Merge pull request #24 from HenryNguyen5/chore/add-to-gitignore
+2018-06-21 14:44:51 | mm-core-js 	| 8a1a595 		| Add node modules to gitignore
+2018-06-14 10:49:23 | mm-core-js 	| dbcb8bc 		| README: irc room
+2018-06-05 18:58:08 | mm-core-js 	| 331398f 		| monero_utils/mymonero_response_parser_utils.js -> hostAPI/response_parser_utils.js; added hostAPI/net_service_utils.js, holding HostedMoneroAPIClient_Base request implementation - still not 100% sure it's right to move the actual get unspent outs, get rand outs, and tx submit request calls and response parsing calls to sendingFunds_utils, primarily because parsing may be wrapped in an application-level abstraction for platform-dependent concurrency
+2018-06-04 20:21:33 | mm-core-js 	| 9c97d6c 		| sendingFunds: SendFunds api change: removed keyImageCache arg for now - hosted monero api client now usingkey-image-cache-managed parsing functions (used for get_unspent_outs).. can probably add it back later by passing optional key img cache arg to send funds, and checking existence at parse-time when networking implementation moved to sendFunds; mymonero_response_parser_utils: added async versions of key img cached parsing fns
+2018-06-03 17:01:08 | mm-core-js 	| 9fbe560 		| monero_requestURI_utils: added support to request uri parser to allow raw oa and xmr addrs (resolves mymonero/mymonero-app-js/#210)
+2018-06-03 15:59:20 | mm-core-js 	| 05af1ed 		| monero_sendingFunds_utils: default priority med -> low
+2018-06-03 15:52:33 | mm-core-js 	| 35752d4 		| basic eslint config .. eslintignoring cryptonote_utils for now for emscripten anyway but that can probably be made more specific to the files we want to exclude
+2018-06-03 12:49:45 | mm-core-js 	| e4366a7 		| monero_wallet_utils: support for wordset detection with prefix-length words to close #14, implemented mnemonic isEqual method to support partial- to full-word comparison
+2018-06-03 11:25:02 | mm-core-js 	| 8d69d90 		| mnemonic: fixed Japanese wordset prefix_len (4->3)
+2018-06-01 11:40:39 | mm-core-js 	| 4d177d8 		| mymonero_response_parser: sorting mempool txs before nonmempool as id while in mempool is not true sequential
+2018-05-30 16:08:01 | mm-core-js 	| 2d126fc 		| monero_sendingFunds_utils: fixed tx err return string
+2018-05-30 15:42:04 | mm-core-js 	| d71bfb2 		| monero_config: updated the dust threshold from 10^10 to 2*10^9; monero_sendingFunds_utils: enhanced sweeping to support sending dusty but mixable outs to get closer to full account balance
+2018-05-28 20:37:04 | mm-core-js 	| fb4887f 		| monero_sendingFunds_utils: SendFunds() api change - removed first arg (isRingCT), and added new arg after amount, bool flag to enable sweep transaction, and ported luigi's sweep implementation PR
+2018-05-26 12:57:06 | mm-core-js 	| f603bd7 		| cryptonote_utils/construct_tx, monero_sendingFunds_utils/SendFunds: disallowing sending to subaddr with pid
+2018-05-11 21:17:05 | mm-core-js 	| 85a1e1e 		| mymonero_response_parser_utils/Parsed_AddressTransactions__sync: filtering outgoing short pids as they are bound not to be correct (server cannot know them - feature pending metadata storage)
+2018-05-01 20:51:56 | mm-core-js 	| f4f259f 		| implemented nettype (MAINNET, TESTNET, STAGENET) via nettype_utils and added nettype to various points which need address prefixes - only mainnet's been tested
+2018-05-01 17:19:52 | mm-core-js 	| e000937 		| added subaddressPrefix to monero_config and removed deprecated fixed per kb fee; cryptonote_utils: CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX name typo
+2018-05-01 15:55:05 | mm-core-js 	| f576a5a 		| Merge pull request #11 from cryptochangements34/derive-subaddress-public-key
+2018-05-01 15:54:48 | mm-core-js 	| 3cf54d6 		| Merge pull request #10 from cryptochangements34/patch-1
+2018-04-30 10:48:31 | mm-core-js 	| f64804e 		| monero_sendingFunds_utils: SendFunds: added statusUpdate callback fn with code
+2018-04-29 15:21:15 | mm-core-js 	| 64c66db 		| monero_requestURI_utils: excluding 'xmr' from being used for tx_amount_ccy
+2018-04-25 19:27:17 | mm-core-js 	| 7d708be 		| monero_requestURI_utils: added URIType to generate uris with and without '//'
+2018-04-24 23:21:07 | mm-core-js 	| f2ee666 		| add sending to subaddresses support
+2018-04-24 20:23:17 | mm-core-js 	| 7df21b0 		| basic cryptonote_utils tests
+2018-04-23 22:50:03 | mm-core-js 	| f19afbb 		| monero_sendingFunds_utils: clarified insufficient balance copy to mention emphasize spendable, and switched from formatMoneyFull to formatMoney
+2018-04-23 22:31:07 | mm-core-js 	| 8003f2a 		| add derive_subaddress_public_key function
+2018-04-19 17:26:53 | mm-core-js 	| 08acb35 		| cryptonote_utils: applied bitcodernull's inputs sorting fix
+2018-04-12 17:46:00 | mm-core-js 	| 0dbdfe7 		| monero_sendingFunds_utils: fee methods minor cleanups and var name fix
+2018-04-10 15:20:24 | mm-core-js 	| 4c63f09 		| removed emscripten's Math.random fallback implementation
+2018-04-10 12:47:33 | mm-core-js 	| 674f4a0 		| mymonero_response_parser_utils, monero_keyImage_cache_utils: for consumers who can't pass a mutable dict for key image caching, added addtl caching-managed code paths - integrators should be sure to call DeleteManagedKeyImagesForWalletWith to release caches e.g. on wallet teardown
+2018-04-06 10:01:11 | mm-core-js 	| c65fb83 		| merging luigi1111's monero v7 input sorting in create tx
+2018-03-29 13:04:53 | mm-core-js 	| 8bbed93 		| monero_sendingFunds_utils: switching back to fixed mixin and matching monero wallet default (min) in mymonero-app-js
+2018-03-28 15:10:38 | mm-core-js 	| b324681 		| deprecated fixedMixin/Ringsize; added fork specific min ringsize accessor; exposed mixin in SendFunds and added thisFork min mixin check
+2018-03-18 15:00:06 | mm-core-js 	| 94f5a1e 		| monero_sendingFunds_utils: deprecating / migrating EstimatedTransaction_ringCT_txSize and added missing priority on fee recalculation to fix mymonero-app-js#167
+2018-03-18 14:58:01 | mm-core-js 	| 7481c08 		| cryptonote_utils: replacing estimateRctSize implementation with C matching impl (with key offsets guesss bumped from 2 to 3)
+2018-02-23 18:20:16 | mm-core-js 	| b4b52b6 		| added fixed mixin and ringsize, and default priority central functions; added fee multiplier and priority support to fee calc in SendFunds... added comments
+2018-02-23 17:12:13 | mm-core-js 	| da420f2 		| fixed up fee multiplier calculation and deprecated pre rct fee and tx size estimation
+2018-02-22 14:44:22 | mm-core-js 	| 28b7e77 		| fixed fee estimate to reflect 2 outs, not 3 (deprecated fee)
+2018-02-09 13:24:41 | mm-core-js 	| e00f2d5 		| added unspent_outs per_kb_fee to send_funds routine
+2018-01-23 17:00:47 | mm-core-js 	| 5ff3d09 		| async as package.json dep
+2018-01-23 16:54:04 | mm-core-js 	| 5e210a1 		| added index.js to support npm+package.json
+2018-01-23 16:40:08 | mm-core-js 	| ddfb22b 		| Merge pull request #5 from bradoyler/npm
+2018-01-23 16:39:38 | mm-core-js 	| 2e868e0 		| Amendments
+2018-01-21 22:57:36 | mm-core-js 	| 0278cf1 		| add package.json
+2018-01-11 11:15:35 | mm-core-js 	| 2625ee6 		| copyright
+2018-01-02 14:50:47 | mm-core-js 	| c9e0a6e 		| key image cache: moving from singleton to per-wallet cache
+2018-01-02 14:46:48 | mm-core-js 	| 44dc82e 		| paymentID_utils: fixed validation typo
+2017-12-17 19:59:16 | mm-core-js 	| 719ea28 		| RegEx -> RegExp typo
+2017-12-17 18:51:00 | mm-core-js 	| bee28ef 		| minor cleanup to monero_paymentID_utils
+2017-12-16 18:50:42 | mm-core-js 	| d2cbbfb 		| cryptonote_utils: added new__int_addr_from_addr_and_short_pid
+2017-12-16 18:49:40 | mm-core-js 	| c0d3089 		| monero_paymentID_utils: deprecating long payment id generator fn, implementing short pid factory, updated pid validation to support 16 char pids
+2017-11-29 18:08:25 | mm-core-js 	| ed60af1 		| VerifiedComponentsForLogIn_sync fixed up viewonly mode detection
+2017-11-16 15:16:02 | mm-core-js 	| cd8561f 		| updated mymonero_response_parser_utils with ratesBySymbol
+2017-11-09 23:15:39 | mm-core-js 	| b625881 		| monero_requestURI_utils: added tx_amount_ccy
+2017-09-28 11:21:43 | mm-core-js 	| 3bfd82d 		| cryptonote_crypto_EMSCRIPTEN: fixed false env isNode=true in webviews with process object by filtering true process.browser
+2017-09-28 10:14:43 | mm-core-js 	| 5295cf3 		| actually removing openalias_utils and passing as fn arg
+2017-09-28 10:06:05 | mm-core-js 	| 54f4aaa 		| moved monero_openalias_utils to lib; updated sendingFunds openalias_utils include path
+2017-09-28 09:36:36 | mm-core-js 	| 8ace67c 		| README: description tweak
+2017-09-28 09:35:20 | mm-core-js 	| 6136192 		| README: PRs
+2017-09-28 09:32:47 | mm-core-js 	| 5b12319 		| README
+2017-09-28 09:32:07 | mm-core-js 	| 9b43b7d 		| What's in This Repo? tweak
+2017-09-28 09:26:56 | mm-core-js 	| 1cd11fa 		| initial commit + README
