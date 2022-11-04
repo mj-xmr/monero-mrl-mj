@@ -52,7 +52,7 @@ Now scaled linearly:
 
 ![plot fees heightmap linear](https://user-images.githubusercontent.com/63722585/200007958-8a1e9845-b306-4bbd-ad48-56ddab8fb989.png)
 
-Compare with Isthmus' fees plot:
+Compare with [Isthmus' fees plot](https://mitchellpkt.medium.com/fingerprinting-a-flood-forensic-statistical-analysis-of-the-mid-2021-monero-transaction-volume-a19cbf41ce60):
 
 ![Isthmus fees](https://user-images.githubusercontent.com/63722585/200008485-42e7fd03-ff30-46d5-8783-f5af43bdfb59.png)
 
