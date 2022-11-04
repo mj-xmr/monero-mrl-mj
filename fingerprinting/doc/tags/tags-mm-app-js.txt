@@ -1,0 +1,48 @@
+2022-08-25 11:03:02 | mm-app-js- 	| v1.3.2 		| Merge pull request #511 from mymonero/release-v1.3.2
+2022-08-10 17:09:19 | mm-app-js- 	| v1.3.0 		| Merge develop into master for v1.3.0 release (#492)
+2022-04-12 10:23:14 | mm-app-js- 	| v1.2.7 		| Merge pull request #480 from mymonero/chore-update-version
+2022-04-07 11:43:45 | mm-app-js- 	| v1.2.6 		| Merge pull request #472 from mymonero/develop
+2022-01-20 10:53:31 | mm-app-js- 	| v1.2.5 		| Merge pull request #453 from mymonero/develop
+2021-12-24 09:35:16 | mm-app-js- 	| v1.2.4 		| Merge pull request #445 from mymonero/develop
+2021-12-14 15:14:03 | mm-app-js- 	| v1.2.3 		| Merge pull request #443 from mymonero/develop
+2021-11-08 14:29:24 | mm-app-js- 	| v1.2.1 		| Merge pull request #430 from mymonero/develop
+2021-10-07 14:04:33 | mm-app-js- 	| v1.2.0 		| Merge pull request #424 from mymonero/develop
+2021-07-21 15:19:17 | mm-app-js- 	| v1.1.24 		| Merge pull request #404 from mymonero/develop
+2021-07-19 21:24:28 | mm-app-js- 	| v1.1.23 		| Merge pull request #400 from mymonero/develop
+2021-07-06 13:02:41 | mm-app-js- 	| v1.1.22 		| Merge pull request #393 from mymonero/develop
+2021-04-30 13:01:04 | mm-app-js- 	| v1.1.21 		| Merge pull request #383 from mymonero/develop
+2021-04-20 09:47:42 | mm-app-js- 	| v1.1.20 		| Merge pull request #377 from mymonero/develop
+2021-02-01 17:11:21 | mm-app-js- 	| v1.1.19 		| Merge pull request #356 from mymonero/develop
+2020-10-20 13:30:32 | mm-app-js- 	| v1.1.18 		| Added zip files for both windows and mac to support the auto update feature
+2020-10-19 21:15:51 | mm-app-js- 	| v1.1.17 		| Bumped version
+2020-10-17 00:30:32 | mm-app-js- 	| v1.1.16 		| Merge pull request #311 from mymonero/develop
+2020-09-16 21:26:56 | mm-app-js- 	| v1.1.16-beta 		| Merge pull request #314 from devinpearson/develop
+2019-11-18 22:07:11 | mm-app-js- 	| v1.1.16-beta.1 		| fixed release mode expected num args under linux for no-sandbox
+2019-11-18 22:07:11 | mm-app-js- 	| v1.1.13 		| electron 7, various
+2019-08-28 21:19:50 | mm-app-js- 	| v1.1.12 		| pkgs upgraded
+2019-04-22 14:06:18 | mm-app-js- 	| v1.1.11 		| using cached mempool tx totals
+2019-04-19 13:38:12 | mm-app-js- 	| v1.1.10 		| Send form ccy autofill fix
+2019-03-08 15:38:48 | mm-app-js- 	| v1.1.9 		| v11 graceful rollover
+2019-02-08 09:32:10 | mm-app-js- 	| v1.1.8 		| csv tweaked
+2019-02-05 15:41:41 | mm-app-js- 	| v1.1.8-rc1 		| new send core
+2019-01-26 11:43:15 | mm-app-js- 	| v1.1.7 		| csv; fixed listbasecontroller exception
+2019-01-11 14:08:37 | mm-app-js- 	| v1.1.6 		| minor ui improvements; pid generation; wallet gen locale fix
+2019-01-11 12:17:09 | mm-app-js- 	| v1.1.5 		| fixed mnemonics of languages with caps
+2019-01-09 17:59:50 | mm-app-js- 	| v1.1.4 		| bug fixes
+2018-12-27 13:07:38 | mm-app-js- 	| v1.1.3 		| release
+2018-12-20 17:02:06 | mm-app-js- 	| v1.1.3-rc1 		| rc1      rc1
+2018-10-23 22:07:20 | mm-app-js- 	| v1.1.2 		| v9 fee updates
+2018-10-18 13:46:09 | mm-app-js- 	| v1.1.1 		| v9 compat
+2018-10-11 17:57:48 | mm-app-js- 	| v1.1.0 		| ringsize 11
+2018-10-07 20:06:30 | mm-app-js- 	| v1.1.0-rc4 		| fixed migration from pre rc3 tx.total_sent/received
+2018-10-05 21:39:34 | mm-app-js- 	| v1.1.0-rc3 		| pending/locked labels
+2018-10-03 20:24:06 | mm-app-js- 	| v1.1.0-rc2 		| wallet qr display requests
+2018-09-19 12:58:33 | mm-app-js- 	| v1.1.0-rc1 		| with new emscripten wasm, software update toggle,..
+2018-07-30 21:34:56 | mm-app-js- 	| v1.0.0 		| tagged for software update initial release
+2018-07-01 13:42:24 | mm-app-js- 	| v1.0.0-rc7 		| db doc format updated to v1
+2018-06-27 14:29:49 | mm-app-js- 	| v1.0.0-rc6 		| whole document encryption for parity
+2018-06-05 23:43:39 | mm-app-js- 	| v1.0.0-rc5 		| electron 2.0.2, various
+2018-05-30 15:45:14 | mm-app-js- 	| v1.0.0-rc4 		| fixes various incl subaddr + short pid; sweep
+2018-05-11 21:23:30 | mm-app-js- 	| v1.0.0-rc3 		| minor window title/icon work; web wallet ios app banner meta; incoming short pid support
+2018-05-10 17:54:11 | mm-app-js- 	| v1.0.0-rc2 		| rc2: Windows
+2018-05-10 12:41:07 | mm-app-js- 	| v1.0.0-rc1 		| Mac developer ID rc1
