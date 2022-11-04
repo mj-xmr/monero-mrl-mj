@@ -61,7 +61,7 @@ Compare with [Isthmus' fees plot](https://mitchellpkt.medium.com/fingerprinting-
 
 [All tags](doc/tags)
 
-[Filtered tags, showing a delay in MyMonero's update](doc/tags/tags-filtered.md), only until public version `v1.2.6`  as reprinted below:
+[Filtered tags, showing a delay in MyMonero's update](doc/tags/tags-filtered.md), only until public version `v1.2.6`,  as reprinted below:
 
 Date       | Project 		|      Tag                | Descr
 ---------- | ------------------ | ----------------- 	| -----------------
