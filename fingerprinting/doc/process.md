@@ -43,7 +43,7 @@ B) - monero_fee_utils::estimate_rct_tx_size
 
 
 
-git-tags-dates.sh | sort >  /home/enjo/devel/pub-lc/scripts/monero/monero-mrl-mj/testnet-framework/doc/tags.md
+git-tags-dates.sh | sort >  ~/devel/pub-lc/scripts/monero/monero-mrl-mj/testnet-framework/doc/tags.md
 
 Search subspace to prove differences:
 
